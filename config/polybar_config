@@ -1,0 +1,326 @@
+[bar/main]
+monitor = ${env:MONITOR:HDMI-0}
+width = 100%
+height = 23
+
+fixed-center = true
+
+font-0 = JetBrainsMono Nerd Font Mono:style=medium:size=12;3
+font-1 = JetBrainsMono Nerd Font Mono:style=italic:size=12;3
+font-2 = JetBrainsMono Nerd Font Mono:style=medium:size=14;3
+font-3 = JetBrainsMono Nerd Font Mono:style=medium:size=16;5
+
+border-size = 8
+border-color = ${colors.transparent}
+line-size = 0
+padding-left = 1
+padding-right = 1
+module-margin-left = 0
+module-margin-right = 0
+background = ${colors.transparent}
+foreground = ${colors.foreground}
+
+modules-left = logo cpu temperature gpu-temp memory network 
+modules-center = i3
+modules-right = pulseaudio date power-menu
+
+#tray-position = right
+#tray-detached = false
+#tray-maxsize = 16
+#tray-padding = 2
+#tray-background = ${colors.transparent}
+
+
+[module/cpu]
+type = internal/cpu
+
+format = <label>
+format-prefix = " %{T3}%{T-}"
+format-prefix-foreground = ${colors.tbackground}
+format-prefix-background = ${colors.transparent}
+
+label = %{T4}%{T-} %percentage%% 
+label-foreground = ${colors.foreground}
+label-background = ${colors.tbackground}
+label-font = 1
+
+
+[module/gpu-temp]
+type = custom/script
+interval = 1
+exec = echo "$(nvidia-smi | awk '{print $3}' | grep "C" | sed "s/[^0-9]//g")%{T4}糖%{T-}"
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.tbackground}
+format-prefix = " %{T3}%{T-}"
+format-prefix-foreground = ${colors.tbackground}
+format-prefix-background = ${colors.transparent}
+format-suffix = "%{T3}%{T-}"
+format-suffix-foreground = ${colors.tbackground}
+format-suffix-background = ${colors.transparent}
+
+
+[module/temperature]
+type = internal/temperature
+
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+units = false
+
+format = <label>
+format-suffix = "%{T3}%{T-}"
+format-suffix-foreground = ${colors.tbackground}
+format-suffix-background = ${colors.transparent}
+
+label = " %temperature-c%%{T4}糖%{T-}"
+label-foreground = ${colors.foreground}
+label-background = ${colors.tbackground}
+
+[module/memory]
+type = internal/memory
+
+format = <label>
+format-prefix = " %{T3}%{T-}"
+format-prefix-foreground = ${colors.tbackground}
+format-prefix-background = ${colors.transparent}
+format-suffix = "%{T3}%{T-} "
+format-suffix-foreground = ${colors.tbackground}
+format-suffix-background = ${colors.transparent}
+
+label = %gb_used%
+label-foreground = ${colors.foreground}
+label-background = ${colors.tbackground}
+label-font = 1
+
+[module/network]
+type = internal/network
+interface = enp3s0
+
+accumulate-stats = true
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-packetloss = <label-connected>
+
+format-connected-prefix = "%{T3}%{T-}"
+format-connected-prefix-foreground = ${colors.tbackground}
+format-connected-prefix-background = ${colors.transparent}
+format-connected-suffix = "%{T3}%{T-}"
+format-connected-suffix-foreground = ${colors.tbackground}
+format-connected-suffix-background = ${colors.transparent}
+
+format-disconnected-prefix = "%{T3}%{T-}"
+format-disconnected-prefix-foreground = ${colors.tbackground}
+format-disconnected-prefix-background = ${colors.transparent}
+format-disconnected-suffix = "%{T3}%{T-}"
+format-disconnected-suffix-foreground = ${colors.tbackground}
+format-disconnected-suffix-background = ${colors.transparent}
+
+format-packetloss-prefix = "%{T3}%{T-}"
+format-packetloss-prefix-foreground = ${colors.tbackground}
+format-packetloss-prefix-background = ${colors.transparent}
+format-packetloss-suffix = "%{T3}%{T-}"
+format-packetloss-suffix-foreground = ${colors.tbackground}
+format-packetloss-suffix-background = ${colors.transparent}
+
+label-connected = %{T4}%{T-} %downspeed% %{T4}%{T-} %upspeed%
+label-connected-foreground = ${colors.foreground}
+label-connected-background = ${colors.tbackground}
+
+label-disconnected = 
+label-disconnected-foreground = ${colors.foreground}
+label-disconnected-background = ${colors.tbackground}
+label-font = 4
+
+label-packetloss-foreground = ${colors.foreground}
+label-packetloss-background = ${colors.tbackground}
+
+[module/ip]
+type = custom/script
+interval = 5
+exec = echo $(gip)
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.tbackground}
+format-prefix = " %{T3}%{T-}"
+format-prefix-foreground = ${colors.tbackground}
+format-prefix-background = ${colors.transparent}
+format-suffix = "%{T3}%{T-}"
+format-suffix-foreground = ${colors.tbackground}
+format-suffix-background = ${colors.transparent}
+
+click-left = gip online
+click-right = gip local
+
+
+[module/logo]
+type = custom/text
+content = %{T4}%{T-}
+content-background = ${colors.tbackground}
+content-foreground = ${colors.blue}
+
+content-prefix = "%{T3}%{T-}"
+content-prefix-foreground = ${colors.tbackground}
+content-prefix-background = ${colors.transparent}
+content-suffix = "%{T3}%{T-}"
+content-suffix-foreground = ${colors.tbackground}
+content-suffix-background = ${colors.transparent}
+
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+strip-wsnumbers = true
+index-sort = true
+enable-click = true
+enable-scroll = false
+wrapping-scroll = false
+reverse-scroll = false
+fuzzy-match = true
+
+ws-icon-0 = 1: Code;
+ws-icon-1 = 2: Browser;爵
+ws-icon-2 = 3: Terminal;
+ws-icon-3 = 4: Social;
+ws-icon-4 = 5: Extra;
+ws-icon-default = 
+
+format = <label-state><label-mode>
+
+format-prefix = " %{T3}%{T-}"
+format-prefix-foreground = ${colors.tbackground}
+format-prefix-background = ${colors.transparent}
+format-suffix = "%{T3}%{T-} "
+format-suffix-foreground = ${colors.tbackground}
+format-suffix-background = ${colors.transparent}
+
+label-mode = %mode%
+label-mode-padding = 1
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.tbackground}
+label-mode-font = 1
+
+label-focused = %icon%
+label-focused-foreground =  ${colors.tactive}
+label-focused-background = ${colors.tbackground}
+label-focused-padding = 1
+label-focused-font = 4
+
+label-unfocused = %icon%
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-background = ${colors.tbackground}
+label-unfocused-padding = 1
+label-unfocused-font = 4
+
+label-visible = %icon%
+label-visible-padding = 1
+label-visible-font = 4
+
+label-urgent = "%icon%"
+label-urgent-foreground = ${colors.twarn}
+label-urgent-background = ${colors.tbackground}
+label-urgent-padding = 1
+label-urgent-font = 4
+
+label-separator = 
+label-separator-padding = 0
+label-separator-foreground = ${colors.divider}
+label-separator-background = ${colors.tbackground}
+
+[module/nauta]
+type = custom/script
+interval = 5
+
+exec = $(echo check-nauta)
+format-background = ${colors.tbackground}
+format-prefix = "%{T3}%{T-}"
+format-prefix-foreground = ${colors.tbackground}
+format-prefix-background = ${colors.transparent}
+format-suffix = "%{T3}%{T-}"
+format-suffix-foreground = ${colors.tbackground}
+format-suffix-background = ${colors.transparent}
+
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+use-ui-max = false
+
+interval = 5
+format-volume = <ramp-volume><label-volume>
+format-volume-prefix = " %{T3}%{T-}"
+format-volume-prefix-foreground = ${colors.tbackground}
+format-volume-prefix-background = ${colors.transparent}
+format-volume-suffix = "%{T3}%{T-} "
+format-volume-suffix-foreground = ${colors.tbackground}
+format-volume-suffix-background = ${colors.transparent}
+format-muted-prefix = " %{T3}%{T-}"
+format-muted-prefix-foreground = ${colors.tbackground}
+format-muted-prefix-background = ${colors.transparent}
+format-muted-suffix = "%{T3}%{T-} "
+format-muted-suffix-foreground = ${colors.tbackground}
+format-muted-suffix-background = ${colors.transparent}
+
+label-volume-background = ${colors.tbackground}
+label-volume-foreground = ${colors.foreground}
+
+label-muted = 
+label-muted-foreground = ${colors.foreground}
+label-muted-background = ${colors.tbackground}
+label-muted-font = 4
+
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-2 = " "
+ramp-volume-font = 4
+ramp-volume-background = ${colors.tbackground}
+
+click-right = pavucontrol
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+time = %{T4}%{T-} %H:%M
+time-alt = %{T4}%{T-} %d/%m/%Y
+
+format-prefix = "%{T3}%{T-}"
+format-prefix-foreground = ${colors.tbackground}
+format-prefix-background = ${colors.transparent}
+format-suffix = "%{T3}%{T-} "
+format-suffix-foreground = ${colors.tbackground}
+format-suffix-background = ${colors.transparent}
+
+label = %time%
+label-background = ${colors.tbackground}
+label-foreground = ${colors.foreground}
+
+[module/power-menu]
+type = custom/script
+exec = echo "%{T4}%{T-}"
+format-background = ${colors.tbackground}
+format-prefix = "%{T3}%{T-}"
+format-prefix-foreground = ${colors.tbackground}
+format-prefix-background = ${colors.transparent}
+format-suffix = "%{T3}%{T-}"
+format-suffix-foreground = ${colors.tbackground}
+format-suffix-background = ${colors.transparent}
+
+click-left = "~/.config/rofi/bin/menu_powermenu"
+
+
+[colors]
+background = #121212
+background-alt = #000000
+foreground = #fafafa
+foreground-alt = #ffffff
+transparent = #00000000
+tbackground = #cc212121
+twarn = #e65100
+tactive = #388e3c
+divider = #1565c0
+blue = #1793d1
