@@ -14,7 +14,7 @@ size-transition = true
 #################################
 corner-radius = 10
 rounded-corners-exclude = [
-  "class_g = 'Polybar'",
+#  "class_g = 'Polybar'",
   "window_type = 'dock'",
   "window_type = 'desktop'"
 ];
@@ -78,7 +78,7 @@ shadow-blue = 0
 #
 # shadow-exclude = []
 shadow-exclude = [
-  "class_g = 'Polybar'",
+#  "class_g = 'Polybar'",
 ];
 
 # Specify a X geometry that describes the region in which shadow should not
@@ -148,7 +148,7 @@ dropdown_menu = { opacity = 0.8; }
 
 
 # Let inactive opacity set by -i override the '_NET_WM_OPACITY' values of windows.
-# inactive-opacity-override = true
+#inactive-opacity-override = true
 inactive-opacity-override = false;
 
 # Default opacity for active windows. (0.0 - 1.0, defaults to 1.0)
@@ -231,7 +231,7 @@ blur: {
 
 # Exclude conditions for background blur.
 blur-background-exclude = [  #
-    "class_g = 'Polybar'",
+#    "class_g = 'Polybar'",
     "class_g = 'mpv'",
     "class_g = 'gl'",
 ];
@@ -267,8 +267,8 @@ vsync = true
 mark-wmwin-focused = true;
 
 # Mark override-redirect windows that doesn't have a child window with 'WM_STATE' focused.
-# mark-ovredir-focused = false
-mark-ovredir-focused = true;
+mark-ovredir-focused = false
+#mark-ovredir-focused = true;
 
 # Try to detect windows with rounded corners and don't consider them 
 # shaped windows. The accuracy is not very high, unfortunately.
@@ -373,7 +373,7 @@ use-damage = false
 # calls are finished before picom starts drawing. Needed on nvidia-drivers 
 # with GLX backend for some users.
 #
-# xrender-sync-fence = false
+xrender-sync-fence = true
 
 # GLX backend: Use specified GLSL fragment shader for rendering window contents. 
 # See `compton-default-fshader-win.glsl` and `compton-fake-transparency-fshader-win.glsl` 
@@ -461,7 +461,7 @@ wintypes:
   normal = { fade = false; shadow = true; }
   tooltip = { fade = true; shadow = true; opacity = 0.75; focus = true; full-shadow = false; };
   dock = { shadow = false; }
-  dnd = { shadow = false; }
+  dnd = { shadow = true; }
   popup_menu = { opacity = 0.85; }
   dropdown_menu = { opacity = 0.85; }
 };

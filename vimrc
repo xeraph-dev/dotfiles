@@ -4,7 +4,7 @@ filetype plugin indent on
 set number 
 set mouse=a 
 set numberwidth=1 
-set clipboard=unnamed 
+set clipboard+=unnamedplus
 set showcmd 
 set ruler 
 set encoding=utf-8 

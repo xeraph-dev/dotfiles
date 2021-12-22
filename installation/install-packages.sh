@@ -21,7 +21,6 @@ sudo pacman -Syu \
   inetutils \
   gzip \
   lxappearance-gtk3 \
-  megacmd \
   mpv \
   neofetch \
   neovim \
@@ -41,11 +40,10 @@ sudo pacman -Syu \
   unrar \
   usbutils \
   vivaldi \
-  xdg-dekstop-portal \
+  xdg-desktop-portal \
   xdg-desktop-portal-gtk \
   xdotool \
   xorg-server \
-  xorg-xhost \
   xorg-xinit \
   yt-dlp
 
