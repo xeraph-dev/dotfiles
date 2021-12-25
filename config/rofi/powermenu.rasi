@@ -1,0 +1,43 @@
+@import "./colors.rasi"
+
+window {
+    border-radius:                  10px;
+	width:							320;
+    location:                       northeast;
+    y-offset:                       45px;
+    x-offset:                       -15px;
+    background-color:               var(black);
+    padding:                        16px;
+}
+
+listview {
+    background-color:               var(black);
+    columns:						3;
+    lines:							1;
+}
+
+mainbox {
+    background-color:               var(black);
+    children:                       [ listview ];
+}
+
+element {
+    background-color:               var(black);
+    text-color:                     var(white);
+    border-radius:                  10px;
+}
+
+element-text {
+    background-color: 				inherit;
+    text-color:       				inherit;
+	font:							"JetBrainsMono Nerd Font 20";
+    horizontal-align:               0.4;
+    vertical-align:                 0.5;
+    padding:                        20px;
+}
+
+element selected {
+    background-color:               var(gutter-grey);
+    text-color:                     var(white);
+    border-radius:                  10px;
+}

@@ -1,0 +1,23 @@
+/* Message Dialog */
+
+@import "./colors.rasi"
+
+* {
+    background-color:       var(black);
+    text-color:             var(white);
+	font:				 	"JetBrainsMono Nerd Font 12";
+}
+
+window {
+    width:      			440px;
+    padding:    			25px;
+    border:					1px;
+    border-radius:          10px;
+    location:               center;
+    y-offset:               -2em;
+}
+
+entry {
+    expand: 				true;
+    text-color:				var(dark-yellow);
+}

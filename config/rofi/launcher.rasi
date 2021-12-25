@@ -1,0 +1,82 @@
+@import "./colors.rasi"
+
+window {
+    padding:            16;
+    background-color:   var(black);
+    border:             0;
+    border-radius:      10;
+    width:              768;
+    height:             480;
+}
+
+mainbox {
+  background-color:     var(black);
+  children:             [ inputbar, listview ];
+}
+
+listview {
+    background-color:   var(black);
+    border-radius:      10;
+    border:             0;
+}
+
+element {
+  font:                 "JetBrainsMono Nerd Font 12";
+  padding:              8px 16px;
+  background:           var(black);
+  text-color:           var(white);
+  cursor:               pointer;
+  orintation:           horizontal;
+  children:             [ element-icon, element-text ];
+  border:               0;
+  margin:               4px 0;
+}
+
+element selected {
+  background-color:     var(gutter-grey);
+  text-color:           var(white);
+  border:               0;
+  border-radius:        4px;
+}
+
+element normal {
+  background-color:     var(black);
+}
+
+element-text {
+  background-color:     inherit;
+  text-color:           inherit;
+  cursor:               pointer;
+  font:                 inherit;
+}
+
+element-icon {
+  size:                 24px;
+  margin:               0 16px 0 0;
+  cursor:               pointer;
+  background-color:     var(transparent); 
+}
+
+inputbar {
+  padding:              8px 16px;
+  children:             [ button-icon, entry ];
+  background-color:     var(black);
+  text-color:           var(white);
+  border:               0;
+  border-radius:        10px;
+  margin:               0 0 4px 0;
+}
+
+button-icon {
+  expand:               false;
+  content:              "";
+  background-color:     inherit;
+  text-color:           inherit;
+  margin:               0 24px 0 4px;
+}
+
+entry {
+  background-color:     inherit;
+  text-color:           inherit;
+
+}

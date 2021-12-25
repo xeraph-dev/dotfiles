@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun
+	rofi -show drun -theme launcher
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -119,3 +119,13 @@ super + alt + shift + {Left,Down,Up,Right}
 # move a floating window
 super + ctrl + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+super + {_,shift + ,ctrl + shift + }Print
+    scrot -p{_,u,s}e 'mv $f ~/Pictures/scrot'
+
+super + shift + p
+    killall -q picom 
+
+
+super + shift + e
+    sh ~/.config/rofi/powermenu.sh

@@ -5,10 +5,9 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 wmname LG3D
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-sh ~/scripts/wallpaper.sh &
-#sh ~/scripts/livewallpaper.sh &
-sh ~/.config/polybar/launch.sh &
-picom --config ~/.config/picom/config &
+feh --bg-fill /data/wallpaper/wallpaper.png &
+sh /data/polybar/launch.sh &
+picom --config /data/picom.conf --experimental-backends &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -21,14 +20,11 @@ bspc config borderless_monocle      true
 bspc config gapless_monocle         true
 
 bspc rule -a jetbrains-webstorm     desktop='^1'    follow=off
-bspc rule -a Vivaldi-stable         desktop='^2'    follow=off
-bspc rule -a Alacritty              desktop='^3'    follow=off
+bspc rule -a Brave-browser          desktop='^2'    follow=off
 bspc rule -a TelegramDesktop        desktop='^4'    follow=off
 bspc rule -a Slack                  desktop='^4'    follow=off
 bspc rule -a Inkscape               desktop='^5'    follow=off
-bspc rule -a Chromium               desktop='^6'    follow=off
-bspc rule -a Google-chrome          dekstop='^6'    follow=off
-bspc rule -a obs                    desktop='^7'    follow=off
+bspc rule -a obs                    desktop='^0'    follow=off
 bspc rule -a Pavucontrol            state=floating  center=on   sticky=on
 bspc rule -a Lxappearance           state=floating  center=on   sticky=on
 bspc rule -a Bitwarden              state=floating  center=on   sticky=on
@@ -37,6 +33,6 @@ bspc rule -a Nvidia-settings        state=floating  center=on   sticky=off
 bspc rule -a mpv                    state=floating  center=off  sticky=on
 bspc rule -a pop-up                 state=floating  center=on
 
-sh $HOME/.config/bspwm/autostart.sh &
+sh /data/bspwm/autostart.sh &
 
 xsetroot -cursor_name left_ptr &

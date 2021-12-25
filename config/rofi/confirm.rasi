@@ -1,0 +1,22 @@
+/* Confirm Dialog */
+
+@import "./colors.rasi"
+
+* {
+    background-color:       var(black);
+    text-color:             var(white);
+	font:				 	"JetBrainsMono Nerd Font 12";
+}
+
+window {
+    width:      			235px;
+    padding:    			25px;
+    border-radius:          10px;
+    location:               center;
+    y-offset:               -2em;
+}
+
+entry {
+    expand: 				true;
+    text-color:				var(dark-yellow);
+}

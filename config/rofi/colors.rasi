@@ -1,0 +1,15 @@
+* {
+  black:            rgb(40, 44, 52);
+  white:            rgb(171, 178, 191);
+  light-red:        rgb(224, 108, 117);
+  dark-red:         rgb(190, 80, 70);
+  green:            rgb(152, 195, 121);
+  light-yellow:     rgb(229, 192, 123);
+  dark-yellow:      rgb(209, 154, 102);
+  blue:             rgb(97, 175, 239);
+  magenta:          rgb(198, 120, 221);
+  cyan:             rgb(86, 182, 194);
+  gutter-grey:      rgb(76, 82, 99);
+  comment-grey:     rgb(92, 99, 112);
+  transparent:      rgba(0,0,0,0%);
+}
