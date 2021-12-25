@@ -129,3 +129,13 @@ super + shift + p
 
 super + shift + e
     sh ~/.config/rofi/powermenu.sh
+
+
+super + ctrl + p 
+    sh /data/scripts/cmus.sh -play
+
+super + Next
+    cmus-remote --next
+
+super + Prior
+    cmus-remote --prev

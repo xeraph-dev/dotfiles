@@ -59,6 +59,7 @@
     pulseaudio = with pkgs; {
       enable = true;
       package = pulseaudioFull;
+      systemWide = true;
     };
   }; 
 }

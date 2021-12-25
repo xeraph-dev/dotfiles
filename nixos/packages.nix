@@ -89,6 +89,7 @@
         nrs = "sudo nixos-rebuild switch";
         nrt = "sudo nixos-rebuild test";
         nrb = "sudo nixos-rebuild boot";
+        cmus = "tmux new-session -s cmus -d /run/current-system/sw/bin/cmus 2> /dev/null; tmux switch-client -t cmus";
       };
       enableCompletion = true;
       autosuggestions.enable = true;
@@ -134,7 +135,9 @@
     xclip
     xdotool
     xwinwrap
-    
+    cmus
+    tmux
+
     # Extras
     numlockx
     rofi
@@ -151,5 +154,6 @@
     tdesktop
     slack
     mpv
+    pavucontrol
   ];
 }

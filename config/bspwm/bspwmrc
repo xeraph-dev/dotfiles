@@ -5,9 +5,10 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 wmname LG3D
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-feh --bg-fill /data/wallpaper/wallpaper.png &
+sh /data/scripts/wallpaper.sh &
+sh /data/scripts/livewallpaper.sh &
+sh /data/scripts/picom.sh &
 sh /data/polybar/launch.sh &
-picom --config /data/picom.conf --experimental-backends &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -33,6 +34,6 @@ bspc rule -a Nvidia-settings        state=floating  center=on   sticky=off
 bspc rule -a mpv                    state=floating  center=off  sticky=on
 bspc rule -a pop-up                 state=floating  center=on
 
-sh /data/bspwm/autostart.sh &
+sh ~/.config/bspwm/autostart.sh &
 
 xsetroot -cursor_name left_ptr &
