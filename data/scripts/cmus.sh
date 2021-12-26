@@ -7,12 +7,12 @@ start_cmus() {
   if [ -z $(pidof cmus) ]; then
     tmux new-session -s cmus -d /run/current-system/sw/bin/cmus > /dev/null
     tmux switch-client -t cmus > /dev/null
+    sleep .5
   fi
 }
 
 play() {
   start_cmus
-  sleep .5
 
   isPlaying=$(cmus-remote --raw status | grep status | awk '{print $2}')
   
