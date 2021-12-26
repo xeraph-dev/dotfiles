@@ -1,11 +1,6 @@
 
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya
-## Mail    : adi1090x@gmail.com
-## Github  : @adi1090x
-## Twitter : @adi1090x
-
 theme_confirm="~/.config/rofi/confirm.rasi"
 theme_message="~/.config/rofi/message.rasi"
 theme_main="~/.config/rofi/powermenu.rasi"

@@ -1,6 +1,13 @@
 { config, pkgs, ... }:
 
 {
+  xdg.portal = {
+    enable = true;
+    gtkUsePortal = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+  };
   programs = {
     neovim = with pkgs; {
       enable = true;
@@ -21,7 +28,6 @@
           }}'
         '';
         packages.nixbundle.start = with vimPlugins; [
-          rust-vim
           vim-one
           vim-devicons
           vim-airline
@@ -30,32 +36,24 @@
           vim-lua
           nerdtree
           vim-tmux-navigator
-          coc-nvim
-          coc-highlight
-          coc-lua
-          coc-rls
-          coc-lua
-          coc-git
-          coc-css
-          coc-yaml
-          coc-json
-          coc-html
-          coc-emmet
-          coc-spell-checker
-          coc-markdownlint
-          coc-prettier
-          coc-tsserver
-          coc-eslint
-          coc-vimlsp
-          coc-pairs
           auto-pairs
           editorconfig-vim
-          supertab
           vim-javascript
           typescript-vim
           vim-jsx-typescript
           vim-yaml
           vim-nix
+          nvim-lspconfig
+          nvim-cmp
+          cmp-nvim-lsp
+          cmp-vsnip
+          cmp-path
+          cmp-buffer
+          rust-tools-nvim
+          vim-vsnip
+          popup-nvim
+          plenary-nvim
+          telescope-nvim
         ];
       };
     };
@@ -133,10 +131,9 @@
     scrot
     docker-compose
     xclip
-    xdotool
-    xwinwrap
     cmus
     tmux
+    yt-dlp
 
     # Extras
     numlockx
@@ -144,16 +141,11 @@
     polybarFull
     picom-next
 
-    # Nodejs
-    nodejs
-    nodejs-12_x
-    nodejs-16_x
-    yarn
-
     # Apps
     tdesktop
     slack
     mpv
     pavucontrol
+    element-desktop
   ];
 }

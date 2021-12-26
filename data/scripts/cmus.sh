@@ -23,6 +23,10 @@ play() {
   fi
 }
 
+name() {
+  echo "$(cmus-remote --raw status | grep file | sed "s/file \/data\/Music\///" | sed "s/\.webm//")"
+}
+
 status_cmus() {
   isPlaying=$(cmus-remote --raw status | grep status | awk '{print $2}')
 
@@ -39,4 +43,5 @@ case "$1" in
   "-start" )    start_cmus     ;;
   "-play"  )    play           ;;
   "-status")    status_cmus    ;;
+  "-name"  )    name           ;;
 esac

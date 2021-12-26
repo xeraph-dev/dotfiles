@@ -79,3 +79,9 @@ fi
 if [ -d "$DATA/scripts" ]; then
   cp "$DATA/scripts" "$PDATA" -r
 fi
+
+
+# Nixos files
+if [ -d "$NIXOS" ]; then
+  cp "$NIXOS" "." -r
+fi
