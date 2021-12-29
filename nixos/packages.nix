@@ -9,6 +9,8 @@
     ];
   };
   programs = {
+    appgate-sdp.enable = true;
+    seahorse.enable = true;
     neovim = with pkgs; {
       enable = true;
       withNodeJs = true;
@@ -54,6 +56,7 @@
           popup-nvim
           plenary-nvim
           telescope-nvim
+          markdown-preview-nvim
         ];
       };
     };
@@ -134,18 +137,22 @@
     cmus
     tmux
     yt-dlp
+    awscli
+    openssl
 
     # Extras
     numlockx
     rofi
     polybarFull
     picom-next
+    gnome.adwaita-icon-theme
 
     # Apps
     tdesktop
     slack
     mpv
     pavucontrol
-    element-desktop
+    postman
+    obs-studio
   ];
 }
