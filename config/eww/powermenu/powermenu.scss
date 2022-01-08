@@ -1,0 +1,24 @@
+@import "../styles/colors.scss";
+@import "../styles/functions.scss";
+
+.powermenu { 
+  button {
+    margin: base(2);
+    background-color: $black;
+    color: $white;
+    border-radius: base(3);
+    box-shadow: $shadow;
+    font-size: 35px;
+    transition-property: background-color, box-shadow, font-size, margin;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      margin: base(3);
+      margin-top: base(4);
+      margin-bottom: base(1);
+      background-color: $tblack;
+      box-shadow: $shadow-hover
+    }
+  }
+}

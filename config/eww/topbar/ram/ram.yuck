@@ -1,0 +1,14 @@
+(defwindow topbar_ram
+  :monitor 0
+  :geometry (geometry
+    :x "245px"
+  :anchor "top left")
+  :windowtype "dock"
+  :stacking "fg"
+  :wm-ignore true
+  (ram_container))
+
+(defwidget ram_container []
+  (label
+    :active false
+    :text "${round((EWW_RAM["used_mem"]/1024)/1024,2)} GB"))

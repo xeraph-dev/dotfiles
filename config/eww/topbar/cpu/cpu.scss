@@ -1,0 +1,16 @@
+@import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
+
+
+.topbar_cpu {
+  padding: 0 base(2) 0 base(4);
+  background-color: $black;
+  margin: base(2) base(3);
+  color: $blue;
+  border-radius: base(4);
+  font-size: base(4);
+  box-shadow: $shadow;
+  label {
+    color: $dark-yellow;
+  }
+}

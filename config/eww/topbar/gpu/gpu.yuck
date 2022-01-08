@@ -1,0 +1,20 @@
+(defwindow topbar_gpu
+  :monitor 0
+  :geometry (geometry
+    :x "176px"
+    :width "80px"
+    :height "30px"
+  :anchor "top left")
+  :windowtype "dock"
+  :stacking "fg"
+  :wm-ignore true
+  (gpu_container))
+
+(defwidget gpu_container []
+  (label
+    :active false
+  :text gpu_temp))
+
+(defpoll gpu_temp
+  :interval "2s"
+  "echo $(sh /data/scripts/gpu-status.sh -temp)糖")

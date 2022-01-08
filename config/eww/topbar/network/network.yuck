@@ -1,0 +1,17 @@
+(defvar net_mobile true)
+
+(defwindow topbar_network
+  :monitor 0
+  :geometry (geometry
+    :x "345px"
+  :anchor "top left")
+  :windowtype "dock"
+  :stacking "fg"
+  :wm-ignore true
+  (network_container))
+
+(defwidget network_container []
+  (button
+    :class {net_mobile ? "mobile" : ""}
+    :onclick ""
+  ""))

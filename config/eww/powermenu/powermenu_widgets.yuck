@@ -1,0 +1,12 @@
+(defwidget powermenu_container []
+  (box :orientation "horizontal"
+    (poweroff) (reboot) (logout)))
+
+(defwidget poweroff []
+  (button :onclick "sh ~/.config/eww/powermenu/scripts/poweroff.sh" ""))
+
+(defwidget reboot []
+  (button :onclick "sh ~/.config/eww/powermenu/scripts/reboot.sh" ""))
+
+(defwidget logout []
+  (button :onclick "sh ~/.config/eww/powermenu/scripts/logout.sh" ""))

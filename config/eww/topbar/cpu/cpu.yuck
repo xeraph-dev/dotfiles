@@ -1,0 +1,22 @@
+(defwindow topbar_cpu
+  :monitor 0
+  :geometry (geometry
+    :x "38px"
+    :width "150px"
+    :height "30px"
+  :anchor "top left")
+  :windowtype "dock"
+  :stacking "fg"
+  :wm-ignore true
+  (cpu_container))
+
+(defwidget cpu_container []
+  (box
+    :active false
+    (cpu_usage) (cpu_temp)))
+
+(defwidget cpu_usage []
+  (label :text " ${round(EWW_CPU["avg"],0)} "))
+
+(defwidget cpu_temp []
+  (label :text "${round(EWW_TEMPS["CPU"],0)}糖"))

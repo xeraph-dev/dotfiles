@@ -1,0 +1,14 @@
+@import "./../styles/colors.scss";
+
+window {
+  background-color: transparent;
+}
+
+.music {
+  background-color: transparent;
+
+  &-container {
+    border: 1px solid $dark-yellow;
+    margin: 8px;
+  }
+}

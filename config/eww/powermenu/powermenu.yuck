@@ -1,0 +1,14 @@
+(include "./powermenu/powermenu_widgets.yuck")
+
+(defwindow powermenu
+  :monitor 0
+  :geometry (geometry
+    :y "37px"
+    :x "-8px"
+    :width "350px"
+    :height "100px"
+  :anchor "top right")
+  :windowtype "dock"
+  :stacking "fg"
+  :wm-ignore true
+  (powermenu_container))

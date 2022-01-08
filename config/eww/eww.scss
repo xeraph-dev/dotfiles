@@ -1,0 +1,11 @@
+@import "./styles/global.scss";
+
+// Topbar
+@import "./topbar/logo/logo.scss";
+@import "./topbar/cpu/cpu.scss";
+@import "./topbar/gpu/gpu.scss";
+@import "./topbar/ram/ram.scss";
+@import "./topbar/network/network.scss";
+
+@import "./powermenu/powermenu.scss";
+@import "./music/music.scss";

@@ -1,0 +1,11 @@
+@import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
+
+.topbar_network {
+  background-color: $black;
+  margin: base(2) base(3);
+  border-radius: base(4);
+  font-size: base(4);
+  box-shadow: $shadow;
+  color: $dark-yellow;
+}

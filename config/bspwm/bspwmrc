@@ -5,6 +5,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 wmname LG3D
 
 pgrep -x sxhkd > /dev/null || sxhkd &
+eww daemon
 sh /data/scripts/wallpaper.sh &
 #sh /data/scripts/livewallpaper.sh &
 sh /data/scripts/picom.sh &
@@ -25,7 +26,8 @@ bspc rule -a Brave-browser          desktop='^2'    follow=off
 bspc rule -a TelegramDesktop        desktop='^4'    follow=off
 bspc rule -a Slack                  desktop='^4'    follow=off
 bspc rule -a Inkscape               desktop='^5'    follow=off
-bspc rule -a obs                    desktop='^10'    follow=off
+bspc rule -a Albion-Online          desktop='^6'    follow=off  state=tiled sticky=off
+bspc rule -a obs                    desktop='^10'   follow=off
 bspc rule -a Pavucontrol            state=floating  center=on   sticky=on
 bspc rule -a Lxappearance           state=floating  center=on   sticky=on
 bspc rule -a Bitwarden              state=floating  center=on   sticky=on

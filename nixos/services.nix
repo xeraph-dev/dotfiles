@@ -7,8 +7,14 @@
       enable = true;
       layout = "us";
       videoDrivers = [ "nvidia" ];
-      windowManager.bspwm = {
-        enable = true;
+      windowManager = {
+        bspwm = {
+          enable = true;
+        };
+        xmonad = {
+          enable = true;
+          enableContribAndExtras = true;
+        };
       };
       displayManager = {
         lightdm.enable = false;

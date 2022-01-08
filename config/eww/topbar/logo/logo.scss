@@ -1,0 +1,14 @@
+@import "../../styles/colors.scss";
+@import "../../styles/functions.scss";
+
+
+.topbar_logo{
+  button {
+    margin: base(2) base(3);
+    color: $blue;
+    border-radius: base(4);
+    background-color: $black;
+    font-size: base(5);
+    box-shadow: $shadow;
+  }
+}

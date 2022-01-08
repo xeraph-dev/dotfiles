@@ -62,6 +62,10 @@ if [ -d "$CONFIG/wezterm" ]; then
   cp "$CONFIG/wezterm" "$PCONFIG" -r
 fi
 
+if [ -d "$CONFIG/eww" ]; then
+  cp "$CONFIG/eww" "$PCONFIG" -r
+fi
+
 
 # Data files
 if [ -d "$DATA/examples" ]; then

@@ -1,0 +1,10 @@
+; Topbar
+(include "./topbar/topbar.yuck")
+(include "./topbar/logo/logo.yuck")
+(include "./topbar/cpu/cpu.yuck")
+(include "./topbar/gpu/gpu.yuck")
+(include "./topbar/ram/ram.yuck")
+(include "./topbar/network/network.yuck")
+
+(include "./powermenu/powermenu.yuck")
+(include "./music/music.yuck")

@@ -1,0 +1,15 @@
+(defwindow topbar_logo
+  :monitor 0
+  :geometry (geometry
+    :width "50px"
+    :height "30px"
+  :anchor "top left")
+  :windowtype "dock"
+  :stacking "fg"
+  :wm-ignore true
+  (logo))
+
+(defwidget logo []
+  (box
+    :class "logo"
+    (button :onclick "$(rofi -show drun -theme launcher)" "")))

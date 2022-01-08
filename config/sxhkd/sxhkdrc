@@ -128,7 +128,7 @@ super + shift + p
 
 
 super + shift + e
-    sh ~/.config/rofi/powermenu.sh
+    sh ~/.config/eww/scripts/launch.sh powermenu
 
 
 super + ctrl + p 
