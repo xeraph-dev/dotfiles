@@ -2,6 +2,8 @@ add_newline = false
 
 [character]                        
 success_symbol = "[ﬦ](bold green)"
+error_symbol = "[ﬦ](bold red)"
+vicmd_symbol = "[ﬦ](bold blue)"
 
 [aws]
 format = ' [$symbol($profile)(\($region\))(\[$duration\])]($style) '
