@@ -58,12 +58,16 @@ if [ -d "$CONFIG/sxhkd" ]; then
   cp "$CONFIG/sxhkd" "$PCONFIG" -r
 fi
 
-if [ -d "$CONFIG/wezterm" ]; then
-  cp "$CONFIG/wezterm" "$PCONFIG" -r
-fi
-
 if [ -d "$CONFIG/eww" ]; then
   cp "$CONFIG/eww" "$PCONFIG" -r
+fi
+
+if [ -d "$CONFIG/termonad" ]; then
+  cp "$CONFIG/termonad" "$PCONFIG" -r
+fi
+
+if [ -f "$CONFIG/starship.toml" ]; then
+  cp "$CONFIG/starship.toml" "$PCONFIG" -r
 fi
 
 
@@ -89,3 +93,7 @@ fi
 if [ -d "$NIXOS" ]; then
   cp "$NIXOS" "." -r
 fi
+
+
+# Restore files
+git restore nixos/users.nix

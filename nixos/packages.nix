@@ -34,6 +34,7 @@
           vim-tmux-navigator
           editorconfig-vim
           markdown-preview-nvim
+          supertab
 
           # Code helpers
           auto-pairs
@@ -52,6 +53,9 @@
           # yaml
           vim-yaml
 
+          # TOML
+          vim-toml
+
           # Haskell
           haskell-vim
           ale
@@ -63,6 +67,9 @@
     };
     zsh = {
       enable = true;
+      promptInit = ''
+        eval "$(starship init zsh)"
+      '';
       shellAliases = {
         # xprop
         get-class = "xprop | grep WM_CLASS";
@@ -104,7 +111,7 @@
         yl251p    = "yt-dlp -f 251 -o '/data/youtube-dl/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'";
 
         # nix-shell
-        ns        = "nix-shell";
+        ns        = "nix-shell --run 'zsh'";
 
         # nixos-rebuild
         nrs       = "sudo nixos-rebuild switch";
@@ -137,7 +144,7 @@
 
     # Terminal
     alacritty
-    wezterm
+    termonad
 
     # Browser
     brave
@@ -162,6 +169,9 @@
     yt-dlp
     awscli
     openssl
+    duf
+    rnix-lsp
+    starship
 
     # Extras
     eww
