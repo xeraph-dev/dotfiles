@@ -9,6 +9,7 @@
     ];
   };
   programs = {
+    adb.enable = true;
     appgate-sdp.enable = true;
     seahorse.enable = true;
     neovim = with pkgs; {
@@ -148,6 +149,7 @@
 
     # Browser
     brave
+    epiphany
 
     # Command line tools
     psmisc
@@ -172,6 +174,8 @@
     duf
     rnix-lsp
     starship
+    zathura
+    lxappearance
 
     # Extras
     eww
@@ -189,5 +193,9 @@
     pavucontrol
     postman
     obs-studio
+    inkscape
+
+    # Nix utilities
+    nix-prefetch-git
   ];
 }
