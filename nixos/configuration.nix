@@ -1,12 +1,18 @@
 { config, pkgs, ... }:
 
-{
+with pkgs;
+let
+in {
   imports = [
     ./hardware.nix
-    ./host.nix
+    ./networking.nix
     ./users.nix
     ./services.nix
-    ./packages.nix
+    ./programs.nix
     ./system.nix
   ];
+
+  virtualisation.docker = (import ./virtualisation/docker.nix pkgs);
+  xdg.portal = (import ./xdg/portal.nix pkgs);
+  environment.systemPackages = (import ./systemPackages.nix pkgs);
 }

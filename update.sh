@@ -70,6 +70,10 @@ if [ -f "$CONFIG/starship.toml" ]; then
   cp "$CONFIG/starship.toml" "$PCONFIG" -r
 fi
 
+if [ -d "$CONFIG/nixpkgs" ]; then
+  cp "$CONFIG/nixpkgs" "$PCONFIG" -r
+fi
+
 
 # Data files
 if [ -d "$DATA/examples" ]; then

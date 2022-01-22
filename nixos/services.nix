@@ -3,6 +3,8 @@
 {
   services = {
     openssh.enable = true;
+    flatpak.enable = true;
+    gnome.gnome-keyring.enable = true;
     xserver = {
       enable = true;
       layout = "us";
@@ -21,11 +23,5 @@
         startx.enable = true;
       };
     };
-  };
-
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
-    extraOptions = "--registry-mirror=https://docker.uclv.cu";
   };
 }
