@@ -37,6 +37,7 @@ bspc rule -a mpv                    state=floating  center=off  sticky=on
 bspc rule -a pop-up                 state=floating  center=on
 bspc rule -a Gsmartcontrol          state=floating  center=on
 bspc rule -a Windscribe2            state=floating  center=on
+bspc rule -a Gnome-calculator       state=floating  center=on
 
 sh ~/.config/bspwm/autostart.sh &
 

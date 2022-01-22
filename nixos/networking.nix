@@ -2,13 +2,9 @@
 
 {
   networking = {
-    useDHCP = false;
-    firewall.enable = false;
+    useDHCP = true;
     hostName = "desktop";
-    interfaces = {
-      enp3s0.useDHCP = true;
-      enp0s20f0u4.useDHCP = true;
-    };
+    firewall.enable = false;
     wireguard.enable = true;
   };
 }

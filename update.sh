@@ -101,3 +101,4 @@ fi
 
 # Restore files
 git restore nixos/users.nix
+rm nixos/hardware-configuration.nix

@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
-with pkgs;
-let
-in [
+with pkgs; [
   # IDE and Editors
   jetbrains.webstorm
 
@@ -47,6 +45,7 @@ in [
   polybarFull
   picom-next
   gnome.adwaita-icon-theme
+  gnome.gnome-calculator
   haskellPackages.xmobar
 
   # Apps

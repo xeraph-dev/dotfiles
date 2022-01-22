@@ -1,10 +1,9 @@
 { config, pkgs, ... }:
 
-with pkgs;
-let
-in {
+{
   imports = [
     ./hardware.nix
+    ./hardware-configuration.nix
     ./networking.nix
     ./users.nix
     ./services.nix
