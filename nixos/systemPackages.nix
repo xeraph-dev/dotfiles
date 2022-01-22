@@ -58,6 +58,7 @@ in [
   obs-studio
   inkscape
   simplescreenrecorder
+  gsmartcontrol
 
   # Nix utilities
   nix-prefetch-git
