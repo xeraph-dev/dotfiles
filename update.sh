@@ -8,29 +8,26 @@ PDATA="./data"
 PCONFIG="./config"
 PNIXOS="./nixos"
 
-if [ ! -d "$PDATA" ]; then
-  mkdir "$PDATA" -p
-fi
-
-if [ ! -d "$PCONFIG" ]; then
-  mkdir "$PCONFIG" -p
-fi
-
-if [ ! -d "$PNIXOS" ]; then
-  mkdir "$PNIXOS" -p
-fi
 
 # Home files
 if [ -f "$HOME/.xinitrc" ]; then
+  rm "./xinitrc"
   cp "$HOME/.xinitrc" "./xinitrc"
 fi
 
 if [ -f "$HOME/.zprofile" ]; then
+  rm "./zprofile"
   cp "$HOME/.zprofile" "./zprofile"
 fi
 
 
 # Home config files
+if [ -d "$PCONFIG" ]; then
+  rm "$PCONFIG" -rf
+fi
+
+mkdir "$PCONFIG" -p
+
 if [ -d "$CONFIG/alacritty" ]; then
   cp "$CONFIG/alacritty" "$PCONFIG" -r
 fi
@@ -76,6 +73,12 @@ fi
 
 
 # Data files
+if [ -d "$PDATA" ]; then
+  rm "$PDATA" -rf
+fi
+
+mkdir "$PDATA" -p
+
 if [ -d "$DATA/examples" ]; then
   cp "$DATA/examples" "$PDATA" -r
 fi
@@ -94,6 +97,12 @@ fi
 
 
 # Nixos files
+if [ -d "$PNIXOS" ]; then
+  rm "$PNIXOS" -rf
+fi
+
+mkdir "$PNIXOS" -p
+
 if [ -d "$NIXOS" ]; then
   cp "$NIXOS" "." -r
 fi
