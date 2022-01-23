@@ -2,27 +2,11 @@
 
 with pkgs;
 let 
-  inherit (builtins) length elemAt;
-
   packages = with pkgs; [
-    zsh
     systemd
   ];
-  
-  makeExports = list:
-    let 
-      len = length list;
-      makeExports' = n: return:
-        if n == len
-        then return
-        else  
-          let
-            path = (elemAt list n) + "/lib" + ":" + return;
-          in
-            makeExports' (n + 1) path;
-    in
-      "export LD_LIBRARY_PATH=" + (makeExports' 0 "") + ":$LD_LIBRARY_PATH";
 
+  makeExports = import /data/nix/makeExports.nix;
 in 
   mkShell rec {
     inherit packages;

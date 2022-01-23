@@ -6,8 +6,7 @@ let
     serve
     yarn
   ];
-in 
-mkShell rec { 
+
   packages = [
     nodejs
     jdk11
@@ -17,11 +16,14 @@ mkShell rec {
     stdenv.cc.cc.lib
   ];
 
-  HISTFILE=toString ./.history;
+  makeExports = import /data/nix/makeExports.nix;
+in 
+mkShell rec { 
+  inherit packages;
+  inherit buildInputs;
 
   shellHook = ''
     export JAVA_HOME="${jdk11}/lib/openjdk";
-    export LD_LIBRARY_PATH=$(nix eval --raw nixpkgs.stdenv.cc.cc.lib)/lib:$LD_LIBRARY_PATH
-  '';
+  '' + (makeExports buildInputs);
 }
 

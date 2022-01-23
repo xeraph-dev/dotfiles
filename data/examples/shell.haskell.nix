@@ -5,10 +5,12 @@ let
   haskellPacks = with haskellPackages; [
     (ghcWithPackages (pkgs: []))
   ];
-in
-mkShell rec {
+
   packages = [
     haskell-language-server
   ] ++ haskellPacks;
+in
+mkShell rec {
+  inherit packages;
 }
 

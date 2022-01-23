@@ -2,8 +2,6 @@
 
 with pkgs;
 let 
-  inherit (builtins) length elemAt;
-
   xOrgPacks = with xorg; [
     libX11
     libXrandr
@@ -35,31 +33,15 @@ let
     libdrm
     wayland
     libxkbcommon
-  ];
-  
-  makeExports = list:
-    let 
-      len = length list;
-      makeExports' = n: return:
-        if n == len
-        then return
-        else  
-          let
-            path = (elemAt list n) + "/lib" + ":" + return;
-          in
-            makeExports' (n + 1) path;
-    in
-      "export LD_LIBRARY_PATH=" + (makeExports' 0 "") + ":$LD_LIBRARY_PATH";
+  ] ++ xOrgPacks;
 
+  makeExports = import /data/nix/makeExports.nix;
 in 
-  mkShell rec {
-    nativeBuildInputs = [] ++ xOrgPacks ++ packages;
+mkShell rec {
+  inherit packages;
 
-    HISTFILE=toString ./.history;
-
-
-    shellHook = ''
-      export LD_LIBRARY_PATH=/data/lib:$LD_LIBRARY_PATH
-    '' + (makeExports nativeBuildInputs);
+  shellHook = ''
+    export LD_LIBRARY_PATH=/data/lib:$LD_LIBRARY_PATH
+  '' + (makeExports packages);
 }
 

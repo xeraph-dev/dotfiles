@@ -83,6 +83,10 @@ if [ -d "$DATA/examples" ]; then
   cp "$DATA/examples" "$PDATA" -r
 fi
 
+if [ -d "$DATA/nix" ]; then
+  cp "$DATA/nix" "$PDATA" -r
+fi
+
 if [ -f "$DATA/picom.conf" ]; then
   cp "$DATA/picom.conf" "$PDATA"
 fi
