@@ -2,8 +2,6 @@
 
 with pkgs;
 let 
-  inherit (builtins) length elemAt;
-
   nodePacks = with nodePackages; [
     serve
     yarn
