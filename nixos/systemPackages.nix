@@ -5,11 +5,7 @@ with pkgs; [
   jetbrains.webstorm
 
   # Terminal
-  alacritty
   termonad
-
-  # Browser
-  brave
 
   # Command line tools
   psmisc
@@ -43,13 +39,11 @@ with pkgs; [
   numlockx
   rofi
   polybarFull
-  picom-next
   gnome.adwaita-icon-theme
   gnome.gnome-calculator
   haskellPackages.xmobar
 
   # Apps
-  tdesktop
   slack
   mpv
   pavucontrol
@@ -63,4 +57,5 @@ with pkgs; [
   nix-prefetch-git
   home-manager
 ]
-++ (import ./systemPackages/vscode-with-extensions.nix pkgs)
+++ (import ./systemPackages/unstable.nix pkgs)
+++ (import ./systemPackages/custom.nix pkgs)

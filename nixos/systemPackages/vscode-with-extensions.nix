@@ -1,8 +1,20 @@
 { config, pkgs, ... }:
 
-with pkgs;
-let 
-  vscodeExtensionsFromMarketplace = vscode-utils.extensionsFromVscodeMarketplace [
+with pkgs; vscode-with-extensions.override {
+  vscodeExtensions = with vscode-extensions; [
+    ms-vsliveshare.vsliveshare
+    mskelton.one-dark-theme
+    esbenp.prettier-vscode
+    formulahendry.auto-rename-tag
+    donjayamanne.githistory
+    eamodio.gitlens
+    kamikillerto.vscode-colorize
+    streetsidesoftware.code-spell-checker
+    dbaeumer.vscode-eslint
+    graphql.vscode-graphql
+    redhat.vscode-yaml
+    wix.vscode-import-cost
+  ] ++ (vscode-utils.extensionsFromVscodeMarketplace [
     {
       name      = "better-comments";
       publisher = "aaron-bond";
@@ -75,22 +87,5 @@ let
     #  version   = "";
     #  sha256    = "0000000000000000000000000000000000000000000000000000";
     #}
-  ];
-  vscodeExtensions = with vscode-extensions; [
-    ms-vsliveshare.vsliveshare
-    mskelton.one-dark-theme
-    esbenp.prettier-vscode
-    formulahendry.auto-rename-tag
-    donjayamanne.githistory
-    eamodio.gitlens
-    kamikillerto.vscode-colorize
-    streetsidesoftware.code-spell-checker
-    dbaeumer.vscode-eslint
-    graphql.vscode-graphql
-    redhat.vscode-yaml
-    wix.vscode-import-cost
-  ];
-  vscode-with-extensions = pkgs.vscode-with-extensions.override {
-    vscodeExtensions = vscodeExtensions ++ vscodeExtensionsFromMarketplace;
-  };
-in [ vscode-with-extensions ]
+  ]);
+}

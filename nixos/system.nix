@@ -1,6 +1,8 @@
 { config, pkgs, lib, ... }:
 
-{
+let
+  unstable = import <nixos-unstable> {};
+in {
   sound.enable = true;
 
   boot.loader = {
@@ -26,9 +28,11 @@
   ];
 
   nix.autoOptimiseStore = true;
-  nixpkgs.config = {
-    allowUnfree = true;
-    pulseaudio = true;
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      pulseaudio = true;
+    };
   };
 
   system = {
