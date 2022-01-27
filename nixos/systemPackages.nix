@@ -1,12 +1,6 @@
 { config, pkgs, ... }:
 
 with pkgs; [
-  # IDE and Editors
-  jetbrains.webstorm
-
-  # Terminal
-  termonad
-
   # Command line tools
   psmisc
   neofetch

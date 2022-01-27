@@ -71,6 +71,13 @@ if [ -d "$CONFIG/nixpkgs" ]; then
   cp "$CONFIG/nixpkgs" "$PCONFIG" -r
 fi
 
+if [ -d "$CONFIG/nvim" ] && [ -f "$CONFIG/nvim/coc-settings.json" ]; then
+  if [ ! -d "$PCONFIG/nvim" ]; then
+    mkdir "$PCONFIG/nvim" -p
+  fi
+  cp "$CONFIG/nvim/coc-settings.json" "$PCONFIG"
+fi
+
 
 # Data files
 if [ -d "$PDATA" ]; then
