@@ -5,6 +5,11 @@
     openssh.enable = true;
     flatpak.enable = true;
     gnome.gnome-keyring.enable = true;
+    emacs = {
+      install = true;
+      enable = true;
+      package = (import ./services/emacs.nix pkgs);
+    };
     xserver = {
       enable = true;
       layout = "us";

@@ -13,7 +13,6 @@ with pkgs; [
   feh
   bat
   lsd
-  scrot
   docker-compose
   xclip
   cmus
@@ -42,7 +41,6 @@ with pkgs; [
   mpv
   pavucontrol
   postman
-  obs-studio
   inkscape
   simplescreenrecorder
   gsmartcontrol

@@ -78,6 +78,10 @@ if [ -d "$CONFIG/nvim" ] && [ -f "$CONFIG/nvim/coc-settings.json" ]; then
   cp "$CONFIG/nvim/coc-settings.json" "$PCONFIG"
 fi
 
+if [ -d "$CONFIG/flameshot" ]; then
+  cp "$CONFIG/flameshot" "$PCONFIG" -r
+fi
+
 
 # Data files
 if [ -d "$PDATA" ]; then

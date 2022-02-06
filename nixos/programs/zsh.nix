@@ -55,6 +55,7 @@ with pkgs;
   ohMyZsh = {
     enable = true;
     theme = "robbyrussell";
+    package = (import <nixos-unstable> {}).oh-my-zsh;
     plugins = [
       "git"
       "npm"

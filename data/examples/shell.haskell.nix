@@ -5,7 +5,6 @@ let
   haskellPacks = with haskellPackages; [
     (ghcWithPackages (pkgs: []))
   ];
-
   packages = [
     haskell-language-server
   ] ++ haskellPacks;

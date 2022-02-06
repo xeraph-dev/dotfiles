@@ -13,8 +13,9 @@ in with unstable; [
 
   # Terminal
   alacritty
-  termonad
 
   # Apps
   tdesktop
+  obs-studio
+  flameshot
 ]

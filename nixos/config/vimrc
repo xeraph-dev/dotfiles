@@ -54,6 +54,8 @@ let g:haskell_backpack = 1 " to enable highlighting of backpack keywords
 
 let g:javascript_plugin_jsdoc = 1
 
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
 let mapleader=" "
 
 nmap <Leader>s <Plug>(easymotion-s2)

@@ -3,6 +3,7 @@
 with pkgs;
 {
   enable = true;
+  package = (import <nixos-unstable> {}).neovim-unwrapped;
   withNodeJs = true;
   defaultEditor = true;
   vimAlias = true;

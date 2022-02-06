@@ -120,8 +120,8 @@ super + alt + shift + {Left,Down,Up,Right}
 super + ctrl + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-super + {_,shift + ,ctrl + shift + }Print
-    scrot -p{_,u,s}e 'mv $f ~/Pictures/scrot'
+super + {_,shift + }Print
+    flameshot {screen,gui -s} -c -p ~/Pictures/flameshot
 
 super + shift + p
     killall -q picom 
