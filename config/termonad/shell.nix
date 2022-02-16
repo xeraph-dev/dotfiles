@@ -3,7 +3,9 @@
 with pkgs;
 let
   haskellPacks = with haskellPackages; [
-    (ghcWithPackages (pkgs: [ termonad ]))
+    (ghcWithPackages (pkgs: [
+      termonad
+    ]))
   ];
 in
 mkShell rec {

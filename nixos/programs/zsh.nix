@@ -26,6 +26,8 @@ with pkgs;
     nh        = "sudo nethogs";
     # df
     dh        = "df -h";
+    # du
+    du        = "du -hcs";
     # yt-dlp
     ylF       = "yt-dlp -F";
     yl18      = "yt-dlp -f 18 -o '/data/youtube-dl/%(uploader)s/%(title)s.%(height)sp.%(ext)s'";
@@ -59,6 +61,7 @@ with pkgs;
     plugins = [
       "git"
       "npm"
+      "yarn"
       "docker"
       "docker-compose"
     ];

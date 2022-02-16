@@ -139,3 +139,6 @@ super + Next
 
 super + Prior
     cmus-remote --prev
+
+super + d
+  code

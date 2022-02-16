@@ -22,9 +22,12 @@ bspc config borderless_monocle      true
 bspc config gapless_monocle         true
 
 bspc rule -a jetbrains-webstorm     desktop='^1'    follow=off
+bspc rule -a jetbrains-studio       desktop='^1'    follow=off
+bspc rule -a Code                   desktop='^1'    follow=off
 bspc rule -a Brave-browser          desktop='^2'    follow=off
 bspc rule -a TelegramDesktop        desktop='^4'    follow=off
 bspc rule -a Slack                  desktop='^4'    follow=off
+bspc rule -a discord                desktop='^4'    follow=off
 bspc rule -a Inkscape               desktop='^5'    follow=off
 bspc rule -a Albion-Online          desktop='^6'    follow=off  state=tiled sticky=off
 bspc rule -a obs                    desktop='^10'   follow=off

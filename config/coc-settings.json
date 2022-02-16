@@ -1,9 +1,15 @@
 {
+  "codeLens.enable": true,
   "eslint.format.enable": true,
   "eslint.autoFixOnSave": true,
   "eslint.run": "onSave",
   "eslint.probe": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html", "vue", "markdown"],
   "languageserver": {
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"]
+    },
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],

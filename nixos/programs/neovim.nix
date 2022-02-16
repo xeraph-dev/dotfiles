@@ -51,6 +51,9 @@ with pkgs;
       haskell-vim
       ale
 
+      # Elm
+      elm-vim
+
       # Coc
       coc-nvim
     ];

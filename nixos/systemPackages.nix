@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
-with pkgs; [
+with pkgs;
+[
+  jetbrains.fleet
+
   # Command line tools
   psmisc
   neofetch
@@ -33,21 +36,14 @@ with pkgs; [
   rofi
   polybarFull
   gnome.adwaita-icon-theme
-  gnome.gnome-calculator
-  haskellPackages.xmobar
 
   # Apps
-  slack
-  mpv
   pavucontrol
-  postman
-  inkscape
   simplescreenrecorder
   gsmartcontrol
 
   # Nix utilities
   nix-prefetch-git
   home-manager
-]
-++ (import ./systemPackages/unstable.nix pkgs)
+] ++ (import ./systemPackages/unstable.nix pkgs)
 ++ (import ./systemPackages/custom.nix pkgs)

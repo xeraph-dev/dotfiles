@@ -1,12 +1,11 @@
 { config, pkgs, ... }:
 
-let 
-  unstable = import <nixos-unstable> {
-    config.allowUnfree = true;
-  };
+let unstable = import <nixos-unstable> { config.allowUnfree = true; };
 in with unstable; [
   # IDE and Editors
   jetbrains.webstorm
+  sublime4
+  (import ./vscode-with-extensions.nix unstable)
 
   # Browser
   brave
@@ -15,7 +14,20 @@ in with unstable; [
   alacritty
 
   # Apps
-  tdesktop
   obs-studio
   flameshot
+  postman
+  inkscape
+  mpv
+  gnome.gnome-boxes
+  virt-manager
+  spice-gtk
+
+  # Social
+  tdesktop
+  discord
+  slack
+
+  # Nix
+  nixfmt
 ]

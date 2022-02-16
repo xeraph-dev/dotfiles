@@ -13,5 +13,6 @@
 
   virtualisation.docker = (import ./virtualisation/docker.nix pkgs);
   xdg.portal = (import ./xdg/portal.nix pkgs);
+
   environment.systemPackages = (import ./systemPackages.nix pkgs);
 }

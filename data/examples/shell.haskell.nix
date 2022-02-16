@@ -1,15 +1,6 @@
-{ pkgs ? import <nixpkgs> {} }:
-
-with pkgs;
-let
-  haskellPacks = with haskellPackages; [
-    (ghcWithPackages (pkgs: []))
-  ];
-  packages = [
-    haskell-language-server
-  ] ++ haskellPacks;
-in
+with import <nixos-unstable> { };
 mkShell rec {
-  inherit packages;
+  buildInputs = [ haskell-language-server ]
+    ++ (with haskellPackages; [ (ghcWithPackages (pkgs: [ ])) ]);
 }
 

@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
 
-let
-  unstable = import <nixos-unstable> {};
+let unstable = import <nixos-unstable> { };
 in {
   sound.enable = true;
 
@@ -18,26 +17,25 @@ in {
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    (nerdfonts.override {
-      fonts = [ 
-        "FiraCode"
-        "JetBrainsMono"
-        "Meslo" 
-      ];
-    })
+    (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Meslo" ]; })
   ];
 
-  nix.autoOptimiseStore = true;
+  nix = {
+    autoOptimiseStore = true;
+    gc.automatic = true;
+  };
+
   nixpkgs = {
     config = {
       allowUnfree = true;
       pulseaudio = true;
     };
+    overlays = import ./overlays/overlays.nix;
   };
 
   system = {
     stateVersion = "21.11";
-    activationScripts.ldso = lib.stringAfter [ "usrbinenv" ] ''                       
+    activationScripts.ldso = lib.stringAfter [ "usrbinenv" ] ''
       mkdir -m 0755 -p /lib64                                                                
       ln -sfn ${pkgs.glibc.out}/lib64/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2.tmp   
       mv -f /lib64/ld-linux-x86-64.so.2.tmp /lib64/ld-linux-x86-64.so.2 # atomically replace 
