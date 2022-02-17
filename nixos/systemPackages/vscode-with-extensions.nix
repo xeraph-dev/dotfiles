@@ -89,5 +89,8 @@ in vscode-with-extensions.override {
         # Test
         hbenl.vscode-test-explorer
         ms-vscode.test-adapter-converter
+
+        # Formatting toggle
+        tombonnike.vscode-status-bar-format-toggle
       ]));
 }

@@ -59,6 +59,12 @@
     version = "0.11.0";
     sha256 = "111vhl71zzh4il1kh21l49alwlllzcvmdbsxyvk9bq3r24hxq1r2";
   };
+  tombonnike.vscode-status-bar-format-toggle = {
+    name = "vscode-status-bar-format-toggle";
+    publisher = "tombonnike";
+    version = "3.0.0";
+    sha256 = "1raz2rmqqx6f17070x9mqd186gz1ihqp26dxgjkdr1zvik8xb6bn";
+  };
   vscode-icons-team.vscode-icons = {
     name = "vscode-icons";
     publisher = "vscode-icons-team";
