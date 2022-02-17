@@ -19,7 +19,6 @@ in with unstable; [
   postman
   inkscape
   mpv
-  gnome.gnome-boxes
   virt-manager
   spice-gtk
 

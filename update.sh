@@ -11,13 +11,17 @@ PNIXOS="./nixos"
 
 # Home files
 if [ -f "$HOME/.xinitrc" ]; then
-  rm "./xinitrc"
-  cp "$HOME/.xinitrc" "./xinitrc"
+  if [ -f "./.xinitrc" ]; then
+    rm "./.xinitrc"
+  fi
+  cp "$HOME/.xinitrc" .
 fi
 
 if [ -f "$HOME/.zprofile" ]; then
-  rm "./zprofile"
-  cp "$HOME/.zprofile" "./zprofile"
+  if [ -f "./.zprofile" ]; then
+    rm "./.zprofile"
+  fi
+  cp "$HOME/.zprofile" .
 fi
 
 
