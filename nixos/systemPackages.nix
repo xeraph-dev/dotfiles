@@ -2,8 +2,6 @@
 
 with pkgs;
 [
-  jetbrains.fleet
-
   # Command line tools
   psmisc
   neofetch

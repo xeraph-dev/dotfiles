@@ -30,7 +30,6 @@ in {
       allowUnfree = true;
       pulseaudio = true;
     };
-    overlays = import ./overlays/overlays.nix;
   };
 
   system = {
