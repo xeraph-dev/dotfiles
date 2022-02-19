@@ -1,16 +1,5 @@
-{ pkgs ? import <nixpkgs> {} }:
-
-with pkgs;
-let
-  haskellPacks = with haskellPackages; [
-    (ghcWithPackages (pkgs: [
-      termonad
-    ]))
-  ];
-in
+with import <nixos-unstable> { };
 mkShell rec {
-  packages = [
-    haskell-language-server
-  ] ++ haskellPacks;
+  buildInputs = [ haskell-language-server ]
+    ++ (with haskellPackages; [ hlint (ghcWithPackages (pkgs: [ termonad ])) ]);
 }
-

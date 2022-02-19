@@ -1,6 +1,5 @@
-with import <nixos-unstable> { };
+with import <develop> { };
 mkShell rec {
   buildInputs = [ haskell-language-server ]
-    ++ (with haskellPackages; [ (ghcWithPackages (pkgs: [ ])) ]);
+    ++ (with haskellPackages; [ hlint (ghcWithPackages (pkgs: [ ])) ]);
 }
-

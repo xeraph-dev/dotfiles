@@ -23,6 +23,12 @@
     version = "2.8.0";
     sha256 = "04vardis9k6yzaha5hhhv16c3z6np48adih46xj88y83ipvg5z2l";
   };
+  ckolkman.vscode-postgres = {
+    name = "vscode-postgres";
+    publisher = "ckolkman";
+    version = "1.4.0";
+    sha256 = "1qx7p711ag88qwpr2n9i8ak7m8isbq3kwiwn5kil00lrllh6sfh4";
+  };
   dtsvet.vscode-wasm = {
     name = "vscode-wasm";
     publisher = "dtsvet";
@@ -35,11 +41,37 @@
     version = "2.21.1";
     sha256 = "022lnkq278ic0h9ggpqcwb3x3ivpcqjimhgirixznq0zvwyrwz3w";
   };
+  hoovercj.haskell-linter = {
+    name = "haskell-linter";
+    publisher = "hoovercj";
+    version = "0.0.6";
+    sha256 = "0fb71cbjx1pyrjhi5ak29wj23b874b5hqjbh68njs61vkr3jlf1j";
+  };
   ms-vscode.test-adapter-converter = {
     name = "test-adapter-converter";
     publisher = "ms-vscode";
     version = "0.1.5";
     sha256 = "11x29njy746mjbv58s7cis2fj6xnmjqc0vn3nb4vv53skxcbhn4y";
+  };
+  mtxr = {
+    sqltools = {
+      name = "sqltools";
+      publisher = "mtxr";
+      version = "0.23.0";
+      sha256 = "0gkm1m7jss25y2p2h6acm8awbchyrsqfhmbg70jaafr1dfxkzfir";
+    };
+    sqltools-driver-pg = {
+      name = "sqltools-driver-pg";
+      publisher = "mtxr";
+      version = "0.2.0";
+      sha256 = "0ws17sna87rs4ihcdj5lzxf8g2nkcgyjpqlafl5kii2c8x364y6j";
+    };
+    sqltools-driver-sqlite = {
+      name = "sqltools-driver-sqlite";
+      publisher = "mtxr";
+      version = "0.2.0";
+      sha256 = "0icwc6a6krqsanx60xar2j5760khljy1wsvdwxcbfc4xjp4l8dhw";
+    };
   };
   ritwickdey.liveserver = {
     name = "liveserver";
@@ -52,6 +84,12 @@
     publisher = "shakram02";
     version = "0.1.1";
     sha256 = "1xqrjmpgbjj6bfr5643bnhj9jxwiswkhwpk2jvapwwiy94c6f3d6";
+  };
+  streetsidesoftware.code-spell-checker-spanish = {
+    name = "code-spell-checker-spanish";
+    publisher = "streetsidesoftware";
+    version = "2.0.5";
+    sha256 = "125l8ibp0z9jrj0jznb9g5ggln4ds3qsny6ws2wqlacc0ir4f8fg";
   };
   swellaby.vscode-rust-test-adapter = {
     name = "vscode-rust-test-adapter";

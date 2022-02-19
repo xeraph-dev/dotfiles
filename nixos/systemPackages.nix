@@ -22,8 +22,6 @@ with pkgs;
   awscli
   openssl
   duf
-  rnix-lsp
-  starship
   zathura
   lxappearance
   gh

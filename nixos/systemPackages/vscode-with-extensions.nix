@@ -50,9 +50,15 @@ in vscode-with-extensions.override {
 
       # Bash
       mads-hartmann.bash-ide-vscode
+      foxundermoon.shell-format
+      timonwong.shellcheck
 
       # Elm
       elmtooling.elm-ls-vscode
+
+      # Haskell
+      haskell.haskell
+      justusadam.language-haskell
     ] ++ (vscode-utils.extensionsFromVscodeMarketplace
       (with custom-extensions; [
         # Comments
@@ -92,5 +98,17 @@ in vscode-with-extensions.override {
 
         # Formatting toggle
         tombonnike.vscode-status-bar-format-toggle
+
+        # Spell check
+        streetsidesoftware.code-spell-checker-spanish
+
+        # Haskell
+        hoovercj.haskell-linter
+
+        # SQL
+        mtxr.sqltools
+        # SQL Tools Drivers
+        mtxr.sqltools-driver-pg # Postgres
+        mtxr.sqltools-driver-sqlite # SQLite
       ]));
 }

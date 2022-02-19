@@ -1,0 +1,272 @@
+{
+  "cSpell.language": "en,es",
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders"
+  ],
+  "cSpell.enableFiletypes": [
+    "nix"
+  ],
+  "cSpell.userWords": [
+    "actix",
+    "adrianrl",
+    "appbar",
+    "automock",
+    "Autoship",
+    "browserslist",
+    "chrono",
+    "clsx",
+    "codegen",
+    "dotenv",
+    "ENTRYPOINT",
+    "eqeqeq",
+    "fastify",
+    "finalhandler",
+    "Flexbox",
+    "fontsource",
+    "Formik",
+    "geolocation",
+    "Giftcard",
+    "graphiql",
+    "grpc",
+    "hookform",
+    "linebreak",
+    "localforage",
+    "mockall",
+    "multilines",
+    "myownproxy",
+    "nacl",
+    "Neutralino",
+    "Neutralinojs",
+    "nextui",
+    "nixfmt",
+    "nixos",
+    "nosniff",
+    "parens",
+    "persistor",
+    "picom",
+    "pkgs",
+    "Prefetch",
+    "Promocode",
+    "RECAPTCHA",
+    "Recents",
+    "reduxjs",
+    "respawn",
+    "rustc",
+    "RUSTC",
+    "rustfmt",
+    "rustup",
+    "SAMEORIGIN",
+    "scrollbars",
+    "sqlx",
+    "stdenv",
+    "stroustrup",
+    "supabase",
+    "Swipeable",
+    "swiper",
+    "Swiper",
+    "tailwindcss",
+    "tauri",
+    "thiserror",
+    "toolchains",
+    "topbar",
+    "tweetnacl",
+    "Unstyled",
+    "uuid",
+    "Uuid",
+    "uuidv",
+    "Viet",
+    "vitejs",
+    "vuex",
+    "waitlist",
+    "xnova"
+  ],
+  //
+  "debug.openDebug": "openOnDebugBreak",
+  //
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "500",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.hover.delay": 2000,
+  "editor.guides.bracketPairs": true,
+  "editor.linkedEditing": true,
+  "editor.tabSize": 2,
+  "editor.suggestSelection": "first",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "One Dark bold",
+        "scope": [
+          "entity.name.function",
+          "entity.name.type.class",
+          "entity.name.type.module",
+          "entity.name.type.namespace",
+          "keyword.other.important"
+        ],
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "name": "One Dark italic",
+        "scope": [
+          "comment",
+          "entity.other.attribute-name",
+          "keyword",
+          "markup.underline.link",
+          "storage.modifier",
+          "storage.type",
+          "string.url",
+          "variable.language.super",
+          "variable.language.this"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "One Dark italic reset",
+        "scope": [
+          "keyword.operator",
+          "keyword.other.type",
+          "storage.modifier.import",
+          "storage.modifier.package",
+          "storage.type.built-in",
+          "storage.type.function.arrow",
+          "storage.type.generic",
+          "storage.type.java",
+          "storage.type.primitive"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      },
+      {
+        "name": "One Dark bold italic",
+        "scope": [
+          "keyword.other.important"
+        ],
+        "settings": {
+          "fontStyle": "bold italic"
+        }
+      }
+    ],
+  },
+  //
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.run": "onSave",
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  //
+  "explorer.confirmDelete": false,
+  //
+  "extensions.autoUpdate": false,
+  //
+  "files.autoSave": "off",
+  "files.exclude": {
+    "package-lock.json": true,
+    "yarn.lock": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/.idea": true,
+    "**/node_modules/*/**": true,
+  },
+  "files.watcherExclude": {
+    "package-lock.json": true,
+    "yarn.lock": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/.idea": true,
+    "**/.vscode": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+  },
+  //
+  "formattingToggle.affects": [
+    "editor.formatOnSave"
+  ],
+  //
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  //
+  "github.gitAuthentication": true,
+  //
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
+  "gitlens.codeLens.scopes": [
+    "containers",
+    "document"
+  ],
+  //
+  "oneDarkPro.bold": true,
+  //
+  "quokka.showCodeLensInOutputChannel": false,
+  //
+  "rest-client.enableTelemetry": false,
+  //
+  "search.exclude": {
+    "package-lock.json": true,
+    "yarn.lock": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/.idea": true,
+    "**/.vscode": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+  },
+  //
+  "security.workspace.trust.untrustedFiles": "open",
+  //
+  "shellformat.path": "/run/current-system/sw/bin/shfmt",
+  //
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  //
+  "update.mode": "none",
+  //
+  "window.menuBarVisibility": "toggle",
+  //
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none",
+  //
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+}

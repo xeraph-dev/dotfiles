@@ -27,6 +27,13 @@ in with unstable; [
   discord
   slack
 
+  # Command line
+  starship
+
   # Nix
+  rnix-lsp
   nixfmt
+
+  # Shell
+  shfmt
 ]

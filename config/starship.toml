@@ -40,6 +40,7 @@ format = ' [$symbol($version \(OTP $otp_version\))]($style) '
 
 [elm]
 format = ' [$symbol($version)]($style) '
+symbol = " "
 
 [erlang]
 format = ' [$symbol($version)]($style) '

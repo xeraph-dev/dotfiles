@@ -4,38 +4,39 @@ module Main where
 
 import Termonad.App (defaultMain)
 import Termonad.Config
-  ( defaultConfigOptions
-  , defaultFontConfig
-  , defaultTMConfig
-  , fontConfig
-  , FontConfig
-  , fontFamily
-  , fontSize
-  , FontSize(FontSizePoints)
-  , options
-  , showTabBar
-  , ShowTabBar(ShowTabBarNever)
-  , showScrollbar
-  , ShowScrollbar(ShowScrollbarNever)
-  , confirmExit
-  , showMenu
-  , cursorBlinkMode
-  , CursorBlinkMode(CursorBlinkModeOff)
-  , boldIsBright
-  , TMConfig
+  ( CursorBlinkMode (CursorBlinkModeOff),
+    FontConfig,
+    FontSize (FontSizePoints),
+    ShowScrollbar (ShowScrollbarNever),
+    ShowTabBar (ShowTabBarNever),
+    TMConfig,
+    boldIsBright,
+    confirmExit,
+    cursorBlinkMode,
+    defaultConfigOptions,
+    defaultFontConfig,
+    defaultTMConfig,
+    fontConfig,
+    fontFamily,
+    fontSize,
+    options,
+    showMenu,
+    showScrollbar,
+    showTabBar,
   )
 import Termonad.Config.Colour
-  ( createColourExtension
-  , addColourExtension)
-
+  ( addColourExtension,
+    createColourExtension,
+  )
 import Theme
-  ( colourConfig )
+  ( colourConfig,
+  )
 
 fontConf :: FontConfig
 fontConf =
   defaultFontConfig
-    { fontFamily    = "JetBrainsMono Nerd Font"
-    , fontSize      = FontSizePoints 11
+    { fontFamily = "JetBrainsMono Nerd Font",
+      fontSize = FontSizePoints 11
     }
 
 tmConfig :: TMConfig
@@ -43,15 +44,14 @@ tmConfig =
   defaultTMConfig
     { options =
         defaultConfigOptions
-          { fontConfig        = fontConf
-          , showScrollbar     = ShowScrollbarNever
-          , confirmExit       = False
-          , showMenu          = False
-          , cursorBlinkMode   = CursorBlinkModeOff
-          , boldIsBright      = True
+          { fontConfig = fontConf,
+            showScrollbar = ShowScrollbarNever,
+            confirmExit = False,
+            showMenu = False,
+            cursorBlinkMode = CursorBlinkModeOff,
+            boldIsBright = True
           }
     }
-
 
 main :: IO ()
 main = do

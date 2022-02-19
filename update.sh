@@ -86,7 +86,7 @@ if [ -d "$CONFIG/flameshot" ]; then
   cp "$CONFIG/flameshot" "$PCONFIG" -r
 fi
 
-if [ -d "$CONFIG/Code" ] && [ -d "$CONFIG/Code/User" ] && [ -d "$CONFIG/Code/User/settings.json" ]; then
+if [ -d "$CONFIG/Code" ] && [ -d "$CONFIG/Code/User" ] && [ -f "$CONFIG/Code/User/settings.json" ]; then
   if [ ! -d "$PCONFIG/Code" ] || [ ! -d "$PCONFIG/Code/User" ]; then
     mkdir "$PCONFIG/Code/User" -p
   fi
