@@ -4,7 +4,6 @@ let unstable = import <nixos-unstable> { config.allowUnfree = true; };
 in with unstable; [
   # IDE and Editors
   jetbrains.webstorm
-  sublime4
   (import ./vscode-with-extensions.nix unstable)
 
   # Browser
