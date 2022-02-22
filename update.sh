@@ -25,6 +25,8 @@ cp ~/".config/starship.toml" "./config" -r
 cp ~/".config/sxhkd" "./config" -r
 
 rm "./etc" -rf
+mkdir "./etc" -p
 mkdir "./etc/docker" -p
 
+cp "/etc/pacman.conf" "./etc"
 cp "/etc/docker/daemon.json" "./etc/docker" -r
