@@ -124,7 +124,7 @@ super + {_,shift + }Print
     flameshot {screen,gui -s} -c -p ~/Pictures/flameshot
 
 super + shift + p
-    killall -q picom 
+    sh ~/scripts/picom.sh 
 
 
 super + shift + e

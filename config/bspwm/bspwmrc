@@ -1,15 +1,6 @@
 #! /bin/sh
 
-export _JAVA_AWT_WM_NONREPARENTING=1
-
 wmname LG3D
-
-pgrep -x sxhkd > /dev/null || sxhkd &
-eww daemon
-sh /data/scripts/wallpaper.sh &
-#sh /data/scripts/livewallpaper.sh &
-sh /data/scripts/picom.sh &
-sh /data/polybar/launch.sh &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -43,7 +34,4 @@ bspc rule -a Windscribe2            state=floating  center=on
 bspc rule -a Gnome-calculator       state=floating  center=on
 bspc rule -a flameshot              state=floating  center=on
 
-
-sh ~/.config/bspwm/autostart.sh &
-
-xsetroot -cursor_name left_ptr &
+sh ~/.config/polybar/launch.sh

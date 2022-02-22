@@ -1,15 +1,5 @@
 #!/bin/sh
 
-DATA="/data"
-CONFIG="$HOME/.config"
-NIXOS="/etc/nixos"
-
-PDATA="./data"
-PCONFIG="./config"
-PNIXOS="./nixos"
-
-
-# Home files
 if [ -f "$HOME/.xinitrc" ]; then
   if [ -f "./.xinitrc" ]; then
     rm "./.xinitrc"
@@ -24,116 +14,73 @@ if [ -f "$HOME/.zprofile" ]; then
   cp "$HOME/.zprofile" .
 fi
 
-
-# Home config files
-if [ -d "$PCONFIG" ]; then
-  rm "$PCONFIG" -rf
+if [ -d "./config" ]; then
+  rm "./config" -rf
 fi
 
-mkdir "$PCONFIG" -p
+mkdir "./config" -p
 
-if [ -d "$CONFIG/alacritty" ]; then
-  cp "$CONFIG/alacritty" "$PCONFIG" -r
+if [ -d ~/".config/alacritty" ]; then
+  cp ~/".config/alacritty" "./config" -r
 fi
 
-if [ -d "$CONFIG/bspwm" ]; then
-  cp "$CONFIG/bspwm" "$PCONFIG" -r
+if [ -d ~/".config/bspwm" ]; then
+  cp ~/".config/bspwm" "./config" -r
 fi
 
-if [ -d "$CONFIG/btop" ] && [ -f "$CONFIG/btop/btop.conf" ]; then
-  if [ ! -d "$PCONFIG/btop" ]; then
-    mkdir "$PCONFIG/btop" -p
+if [ -d ~/".config/btop" ] && [ -f ~/".config/btop/btop.conf" ]; then
+  if [ ! -d "./config/btop" ]; then
+    mkdir "./config/btop" -p
   fi
-  cp "$CONFIG/btop/btop.conf" "$PCONFIG/btop"
+  cp ~/".config/btop/btop.conf" "./config/btop"
 fi
 
-if [ -d "$CONFIG/neofetch" ]; then
-  cp "$CONFIG/neofetch" "$PCONFIG" -r
-fi
-
-if [ -d "$CONFIG/rofi" ]; then
-  cp "$CONFIG/rofi" "$PCONFIG" -r
-fi
-
-if [ -d "$CONFIG/sxhkd" ]; then
-  cp "$CONFIG/sxhkd" "$PCONFIG" -r
-fi
-
-if [ -d "$CONFIG/eww" ]; then
-  cp "$CONFIG/eww" "$PCONFIG" -r
-fi
-
-if [ -d "$CONFIG/termonad" ]; then
-  cp "$CONFIG/termonad" "$PCONFIG" -r
-fi
-
-if [ -f "$CONFIG/starship.toml" ]; then
-  cp "$CONFIG/starship.toml" "$PCONFIG" -r
-fi
-
-if [ -d "$CONFIG/nixpkgs" ]; then
-  cp "$CONFIG/nixpkgs" "$PCONFIG" -r
-fi
-
-if [ -d "$CONFIG/nvim" ] && [ -f "$CONFIG/nvim/coc-settings.json" ]; then
-  if [ ! -d "$PCONFIG/nvim" ]; then
-    mkdir "$PCONFIG/nvim" -p
+if [ -d ~/".config/Code" ] && [ -d ~/".config/Code/User" ] && [ -f ~/".config/Code/User/settings.json" ]; then
+  if [ ! -d "./config/Code" ] || [ ! -d "./config/Code/User" ]; then
+    mkdir "./config/Code/User" -p
   fi
-  cp "$CONFIG/nvim/coc-settings.json" "$PCONFIG"
+  cp ~/".config/Code/User/settings.json" "./config/Code/User"
 fi
 
-if [ -d "$CONFIG/flameshot" ]; then
-  cp "$CONFIG/flameshot" "$PCONFIG" -r
+if [ -d ~/".config/eww" ]; then
+  cp ~/".config/eww" "./config" -r
 fi
 
-if [ -d "$CONFIG/Code" ] && [ -d "$CONFIG/Code/User" ] && [ -f "$CONFIG/Code/User/settings.json" ]; then
-  if [ ! -d "$PCONFIG/Code" ] || [ ! -d "$PCONFIG/Code/User" ]; then
-    mkdir "$PCONFIG/Code/User" -p
+if [ -d ~/".config/flameshot" ]; then
+  cp ~/".config/flameshot" "./config" -r
+fi
+
+if [ -d ~/".config/gtk-3.0" ]; then
+  cp ~/".config/gtk-3.0" "./config" -r
+fi
+
+if [ -d ~/".config/neofetch" ]; then
+  cp ~/".config/neofetch" "./config" -r
+fi
+
+if [ -d ~/".config/nvim" ] && [ -f ~/".config/nvim/coc-settings.json" ]; then
+  if [ ! -d "./config/nvim" ]; then
+    mkdir "./config/nvim" -p
   fi
-  cp "$CONFIG/Code/User/settings.json" "$PCONFIG/Code/User"
+  cp ~/".config/nvim/coc-settings.json" "./config"
 fi
 
-
-# Data files
-if [ -d "$PDATA" ]; then
-  rm "$PDATA" -rf
+if [ -d ~/".config/picom" ]; then
+  cp ~/".config/picom" "./config" -r
 fi
 
-mkdir "$PDATA" -p
-
-if [ -d "$DATA/examples" ]; then
-  cp "$DATA/examples" "$PDATA" -r
+if [ -d ~/".config/polybar" ]; then
+  cp ~/".config/polybar" "./config" -r
 fi
 
-if [ -d "$DATA/nix" ]; then
-  cp "$DATA/nix" "$PDATA" -r
+if [ -d ~/".config/rofi" ]; then
+  cp ~/".config/rofi" "./config" -r
 fi
 
-if [ -f "$DATA/picom.conf" ]; then
-  cp "$DATA/picom.conf" "$PDATA"
+if [ -f ~/".config/starship.toml" ]; then
+  cp ~/".config/starship.toml" "./config" -r
 fi
 
-if [ -d "$DATA/polybar" ]; then
-  cp "$DATA/polybar" "$PDATA" -r
+if [ -d ~/".config/sxhkd" ]; then
+  cp ~/".config/sxhkd" "./config" -r
 fi
-
-if [ -d "$DATA/scripts" ]; then
-  cp "$DATA/scripts" "$PDATA" -r
-fi
-
-
-# Nixos files
-if [ -d "$PNIXOS" ]; then
-  rm "$PNIXOS" -rf
-fi
-
-mkdir "$PNIXOS" -p
-
-if [ -d "$NIXOS" ]; then
-  cp "$NIXOS" "." -r
-fi
-
-
-# Restore files
-git restore nixos/users.nix
-rm nixos/hardware-configuration.nix

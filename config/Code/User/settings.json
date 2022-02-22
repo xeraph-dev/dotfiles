@@ -1,91 +1,4 @@
 {
-  "cSpell.language": "en,es",
-  "cSpell.ignorePaths": [
-    "package-lock.json",
-    "node_modules",
-    "vscode-extension",
-    ".git/objects",
-    ".vscode",
-    ".vscode-insiders"
-  ],
-  "cSpell.enableFiletypes": [
-    "nix"
-  ],
-  "cSpell.userWords": [
-    "actix",
-    "adrianrl",
-    "appbar",
-    "automock",
-    "Autoship",
-    "browserslist",
-    "chrono",
-    "clsx",
-    "codegen",
-    "dotenv",
-    "ENTRYPOINT",
-    "eqeqeq",
-    "fastify",
-    "finalhandler",
-    "Flexbox",
-    "fontsource",
-    "Formik",
-    "geolocation",
-    "Giftcard",
-    "graphiql",
-    "grpc",
-    "hookform",
-    "linebreak",
-    "localforage",
-    "mockall",
-    "multilines",
-    "myownproxy",
-    "nacl",
-    "Neutralino",
-    "Neutralinojs",
-    "nextui",
-    "nixfmt",
-    "nixos",
-    "nosniff",
-    "parens",
-    "persistor",
-    "picom",
-    "pkgs",
-    "Prefetch",
-    "Promocode",
-    "RECAPTCHA",
-    "Recents",
-    "reduxjs",
-    "respawn",
-    "rustc",
-    "RUSTC",
-    "rustfmt",
-    "rustup",
-    "SAMEORIGIN",
-    "scrollbars",
-    "sqlx",
-    "stdenv",
-    "stroustrup",
-    "supabase",
-    "Swipeable",
-    "swiper",
-    "Swiper",
-    "tailwindcss",
-    "tauri",
-    "thiserror",
-    "toolchains",
-    "topbar",
-    "tweetnacl",
-    "Unstyled",
-    "uuid",
-    "Uuid",
-    "uuidv",
-    "Viet",
-    "vitejs",
-    "vuex",
-    "waitlist",
-    "xnova"
-  ],
-  //
   "debug.openDebug": "openOnDebugBreak",
   //
   "editor.bracketPairColorization.enabled": true,
@@ -102,19 +15,6 @@
   "editor.suggestSelection": "first",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
-      {
-        "name": "One Dark bold",
-        "scope": [
-          "entity.name.function",
-          "entity.name.type.class",
-          "entity.name.type.module",
-          "entity.name.type.namespace",
-          "keyword.other.important"
-        ],
-        "settings": {
-          "fontStyle": "bold"
-        }
-      },
       {
         "name": "One Dark italic",
         "scope": [
@@ -148,17 +48,8 @@
         "settings": {
           "fontStyle": ""
         }
-      },
-      {
-        "name": "One Dark bold italic",
-        "scope": [
-          "keyword.other.important"
-        ],
-        "settings": {
-          "fontStyle": "bold italic"
-        }
       }
-    ],
+    ]
   },
   //
   "eslint.alwaysShowStatus": true,
@@ -219,6 +110,8 @@
     "document"
   ],
   //
+  "haskell.formattingProvider": "stylish-haskell",
+  //
   "oneDarkPro.bold": true,
   //
   "quokka.showCodeLensInOutputChannel": false,
@@ -241,7 +134,7 @@
   //
   "security.workspace.trust.untrustedFiles": "open",
   //
-  "shellformat.path": "/run/current-system/sw/bin/shfmt",
+  "shellformat.path": "/usr/bin/shfmt",
   //
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
@@ -271,5 +164,11 @@
   },
   "[rust]": {
     "editor.tabSize": 4,
+  },
+  "[haskell]": {
+    "editor.defaultFormatter": "haskell.haskell"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   }
 }
