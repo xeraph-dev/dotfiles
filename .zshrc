@@ -45,4 +45,7 @@ alias vim="nvim"
 export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+export PATH="$HOME/.local/bin:$PATH"
+
 source /usr/share/nvm/init-nvm.sh
+source ~/.cargo/env

@@ -94,7 +94,7 @@
 - bspwm
 - sxhkd
 - eww-git [Aur](https://aur.archlinux.org/packages/eww-git)
-- picom-jonaburg-fix [Aur](https://aur.archlinux.org/packages/picom-jonaburg-fix)
+- picom-jonaburg-fix [Aur](https://aur.archlinux.org/packages/picom-ibhagwan-git)
 - polybar [Aur](https://aur.archlinux.org/packages/polybar)
 ### Browsers
 - brave-bin [Aur](https://aur.archlinux.org/packages/brave-bin)
@@ -110,11 +110,18 @@
 - vscode [Aur](https://aur.archlinux.org/packages/visual-studio-code-bin)
 
 ### Development
-- nodejs
-  - nvm [Aur](https://aur.archlinux.org/packages/nvm)
 - postman-bin [Aur](https://aur.archlinux.org/packages/postman-bin)
 - shfmt
-- rustup
+- nodejs
+  - npm
+  - nvm [Aur](https://aur.archlinux.org/packages/nvm)
+  - serve [npm](https://www.npmjs.com/package/serve)
+  - yarn [npm](https://www.npmjs.com/package/yarn)
+- rustup [Web](https://rustup.rs/)
+  - cargo-edit [cargo](https://docs.rs/crate/cargo-edit)
+  - cargo-make [cargo](https://docs.rs/cargo-make)
+  - cargo-watch [cargo](https://docs.rs/crate/cargo-watch)
+  - rustfmt [cargo](https://docs.rs/rustfmt)
 
 ### Fonts
 - noto-fonts

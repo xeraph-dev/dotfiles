@@ -65,8 +65,6 @@
   //
   "explorer.confirmDelete": false,
   //
-  "extensions.autoUpdate": false,
-  //
   "files.autoSave": "off",
   "files.exclude": {
     "package-lock.json": true,

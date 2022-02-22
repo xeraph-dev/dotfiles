@@ -132,7 +132,7 @@ super + shift + e
 
 
 super + ctrl + p 
-    sh /data/scripts/cmus.sh -play
+    sh ~/scripts/cmus.sh -play
 
 super + Next
     cmus-remote --next
