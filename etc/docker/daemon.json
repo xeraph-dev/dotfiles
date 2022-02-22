@@ -1,0 +1,4 @@
+{
+    "registry-mirrors":  ["https://docker.uclv.cu"],
+    "insecure-registries": ["http://docker.uclv.cu"]
+}
