@@ -51,6 +51,7 @@
 - tmux
 - wget
 - wireguard-tools
+- wmname
 - yt-dlp
 - zsh
 
@@ -117,7 +118,7 @@
   - nvm [Aur](https://aur.archlinux.org/packages/nvm)
   - serve [npm](https://www.npmjs.com/package/serve)
   - yarn [npm](https://www.npmjs.com/package/yarn)
-- rustup [Web](https://rustup.rs/)
+- rustup 
   - cargo-edit [cargo](https://docs.rs/crate/cargo-edit)
   - cargo-make [cargo](https://docs.rs/cargo-make)
   - cargo-watch [cargo](https://docs.rs/crate/cargo-watch)
