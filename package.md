@@ -37,6 +37,7 @@
 - aws-cli
 - bat
 - btop
+- fd
 - feh
 - gnome-keyring
 - inetutils
@@ -46,6 +47,7 @@
 - nethogs
 - numlockx
 - openresolv
+- ripgrep
 - seahorse
 - starship
 - tmux
@@ -106,6 +108,8 @@
 - telegram-desktop
 
 ### IDE/Editors
+- emacs
+  - doom-emacs [GitHub](https://github.com/hlissner/doom-emacs)
 - jetbrains-toolbox [Aur](https://aur.archlinux.org/packages/jetbrains-toolbox)
 - neovim
 - vscode [Aur](https://aur.archlinux.org/packages/visual-studio-code-bin)

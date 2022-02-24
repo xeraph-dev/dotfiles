@@ -168,5 +168,7 @@
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  }
+  },
+  "liveshare.audio.startCallOnShare": true,
+  "editor.inlineSuggest.enabled": true
 }
