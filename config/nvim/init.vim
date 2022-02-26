@@ -47,9 +47,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tbastos/vim-lua'
 
 " JavaScript/TypeScript
-Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'ianks/vim-tsx'
 
 " yaml
 Plug 'stephpy/vim-yaml'
@@ -57,15 +56,8 @@ Plug 'stephpy/vim-yaml'
 " toml
 Plug 'cespare/vim-toml'
 
-" Haskell
-Plug 'neovimhaskell/haskell-vim'
-Plug 'w0rp/ale'
-
-" Elm
-Plug 'elmcast/elm-vim'
-
 " Coc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
@@ -89,15 +81,17 @@ let g:webdevicons_conceal_nerdtree_brackets=1
 
 let NERDTreeQuitOnOpen=1
 
-let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*'] 
+let g:coc_global_extensions = ['coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json']
 
-let g:haskell_enable_quantification = 1 " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1 " to enable highlighting of `mdo` and `rec` 
-let g:haskell_enable_arrowsyntax = 1 " to enable highlighting of `proc` 
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern` 
-let g:haskell_enable_typeroles = 1 " to enable highlighting of type roles 
-let g:haskell_enable_static_pointers = 1 " to enable highlighting of `static` 
-let g:haskell_backpack = 1 " to enable highlighting of backpack keywords
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*'] 
 
 let g:javascript_plugin_jsdoc = 1
 
@@ -124,3 +118,5 @@ nmap <silent> gtd <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+au BufNewFile,BufRead *.ts setlocal filetype=typescritp
+au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx

@@ -8,8 +8,9 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
-  "editor.hover.delay": 2000,
   "editor.guides.bracketPairs": true,
+  "editor.hover.delay": 2000,
+  "editor.inlineSuggest.enabled": true,
   "editor.linkedEditing": true,
   "editor.tabSize": 2,
   "editor.suggestSelection": "first",
@@ -64,7 +65,11 @@
   ],
   //
   "explorer.confirmDelete": false,
-  //
+  //,
+  "files.associations": {
+    "*.css": "css",
+    ".browserslistrc": "plaintext"
+  },
   "files.autoSave": "off",
   "files.exclude": {
     "package-lock.json": true,
@@ -74,7 +79,7 @@
     "**/.settings": true,
     "**/.factorypath": true,
     "**/.idea": true,
-    "**/node_modules/*/**": true,
+    "**/node_modules/*/**": true
   },
   "files.watcherExclude": {
     "package-lock.json": true,
@@ -87,28 +92,31 @@
     "**/.vscode": true,
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
-    "**/node_modules/*/**": true,
+    "**/node_modules/*/**": true
   },
   //
-  "formattingToggle.affects": [
-    "editor.formatOnSave"
-  ],
+  "formattingToggle.affects": ["editor.formatOnSave"],
   //
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   //
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false
+  },
   "github.gitAuthentication": true,
   //
   "gitlens.advanced.messages": {
     "suppressLineUncommittedWarning": true
   },
-  "gitlens.codeLens.scopes": [
-    "containers",
-    "document"
-  ],
+  "gitlens.codeLens.scopes": ["containers", "document"],
   //
   "haskell.formattingProvider": "stylish-haskell",
+  //
+  "liveshare.audio.startCallOnShare": true,
   //
   "oneDarkPro.bold": true,
   //
@@ -127,7 +135,7 @@
     "**/.vscode": true,
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
-    "**/node_modules/*/**": true,
+    "**/node_modules/*/**": true
   },
   //
   "security.workspace.trust.untrustedFiles": "open",
@@ -139,6 +147,8 @@
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   //
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  //
   "update.mode": "none",
   //
   "window.menuBarVisibility": "toggle",
@@ -147,11 +157,20 @@
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
-  //
+  //,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescriptreact]": {
@@ -161,14 +180,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[rust]": {
-    "editor.tabSize": 4,
+    "editor.tabSize": 4
   },
   "[haskell]": {
     "editor.defaultFormatter": "haskell.haskell"
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "liveshare.audio.startCallOnShare": true,
-  "editor.inlineSuggest.enabled": true
+  }
 }
