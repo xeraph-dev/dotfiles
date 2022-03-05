@@ -45,6 +45,10 @@ alias vim="nvim"
 export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+export JUST_HOME="$HOME/just"
+export JUST_TARGET="$JUST_HOME"
+
+export PATH="$PATH:$JUST_HOME"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 

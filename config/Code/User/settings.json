@@ -9,7 +9,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "editor.guides.bracketPairs": true,
-  "editor.hover.delay": 2000,
+  "editor.hover.delay": 500,
   "editor.inlineSuggest.enabled": true,
   "editor.linkedEditing": true,
   "editor.tabSize": 2,
@@ -53,6 +53,13 @@
     ]
   },
   //
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
+  "emmet.syntaxProfiles": {
+    "postcss": "css"
+  },
+  //
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.run": "onSave",
@@ -67,8 +74,8 @@
   "explorer.confirmDelete": false,
   //,
   "files.associations": {
-    "*.css": "css",
-    ".browserslistrc": "plaintext"
+    ".browserslistrc": "plaintext",
+    ".postcssrc": "jsonc"
   },
   "files.autoSave": "off",
   "files.exclude": {
@@ -116,6 +123,8 @@
   //
   "haskell.formattingProvider": "stylish-haskell",
   //
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  //
   "liveshare.audio.startCallOnShare": true,
   //
   "oneDarkPro.bold": true,
@@ -152,8 +161,6 @@
   "update.mode": "none",
   //
   "window.menuBarVisibility": "toggle",
-  //
-  "workbench.activityBar.visible": true,
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
