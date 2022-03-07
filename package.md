@@ -118,8 +118,12 @@
 - bspwm
 - sxhkd
 - eww-git [Aur](https://aur.archlinux.org/packages/eww-git)
-- picom-jonaburg-fix [Aur](https://aur.archlinux.org/packages/picom-ibhagwan-git)
+- picom-ibhagwan-git [Aur](https://aur.archlinux.org/packages/picom-ibhagwan-git)
 - polybar [Aur](https://aur.archlinux.org/packages/polybar)
+
+### Notes
+
+- elementary-planner [Aur](https://aur.archlinux.org/packages/elementary-planner)
 
 ### Browsers
 
