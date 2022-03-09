@@ -41,6 +41,8 @@ alias yl251p="yt-dlp -f 251 -o '/data/youtube-dl/%(uploader)s/%(playlist)s/%(pla
 alias cmus="tmux new-session -s cmus -d /usr/bin/cmus 2> /dev/null; tmux switch-client -t cmus"
 alias vi="nvim"
 alias vim="nvim"
+alias wg-up="wg-quick up /data/wg.conf"
+alias wg-down="wg-quick down /data/wg.conf"
 
 export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1

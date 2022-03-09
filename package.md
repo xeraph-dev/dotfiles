@@ -61,7 +61,6 @@
 - starship
 - tmux
 - wget
-- wireguard-tools
 - wmname
 - yt-dlp
 - zsh
@@ -112,6 +111,12 @@
 ### AUR Helper
 
 - yay-bin [Aur](https://aur.archlinux.org/packages/yay-bin)
+
+### VPNs
+
+- cloudflare-warp-bin [Aur](https://aur.archlinux.org/packages/cloudflare-warp-bin)
+- windscribe-v2-bin [Aur](https://aur.archlinux.org/packages/windscribe-v2-bin)
+- wireguard-tools
 
 ### Window Manager and WM Utilities
 
