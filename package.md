@@ -140,7 +140,6 @@
 
 ### Messaging
 
-- discord
 - slack-desktop [Aur](https://aur.archlinux.org/packages/slack-desktop)
 - telegram-desktop
 
