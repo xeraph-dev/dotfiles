@@ -60,6 +60,7 @@
 - seahorse
 - starship
 - tmux
+- translate-shell
 - wget
 - wmname
 - yt-dlp
