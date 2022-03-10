@@ -23,6 +23,7 @@ cp ~/".config/polybar" "./config" -r
 cp ~/".config/rofi" "./config" -r
 cp ~/".config/starship.toml" "./config" -r
 cp ~/".config/sxhkd" "./config" -r
+cp ~/".config/zathura" "./config" -r
 
 rm "./etc" -rf
 mkdir "./etc" -p

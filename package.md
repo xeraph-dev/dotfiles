@@ -108,6 +108,10 @@
 - flameshot
 - obs-studio
 
+### Productivity
+- zathura
+- zathura-pdf-poppler
+
 ### AUR Helper
 
 - yay-bin [Aur](https://aur.archlinux.org/packages/yay-bin)

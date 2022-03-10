@@ -112,7 +112,7 @@
     "*": true,
     "yaml": false,
     "plaintext": true,
-    "markdown": false
+    "markdown": true
   },
   "github.gitAuthentication": true,
   //
@@ -197,5 +197,8 @@
   },
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
