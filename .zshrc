@@ -2,10 +2,13 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(
   git
+  pip
   npm
   yarn
   docker
   docker-compose
+  rust
+  nvm
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -43,16 +46,29 @@ alias vi="nvim"
 alias vim="nvim"
 alias wg-up="wg-quick up /data/wg.conf"
 alias wg-down="wg-quick down /data/wg.conf"
+alias docker-start="sudo systemctl start docker"
+alias nexus-mount="sudo mount /dev/disk/by-label/nexus /nexus-data"
+alias nexus-docker="docker run -d -p 8081:8081 --rm --name nexus -v /nexus-data:/nexus-data sonatype/nexus3"
+alias open="xdg-open"
 
 export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
+export GTK_IM_MODULE=xim
+export npm_config_target_arch=x64
 
-export JUST_HOME="$HOME/just"
-export JUST_TARGET="$JUST_HOME"
+export ANDROID_HOME=$HOME/android-sdk
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/tools/bin:$PATH
+export PATH=$ANDROID_HOME/emulator:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
 
-export PATH="$PATH:$JUST_HOME"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.emacs.d/bin:$PATH"
+export JUST_HOME=$HOME/just
+export JUST_TARGET=$JUST_HOME
+export PATH=$JUST_HOME:$PATH
+
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.emacs.d/bin:$PATH
+export PATH=$HOME/.cabal/bin:$PATH
 
 source /usr/share/nvm/init-nvm.sh
 source ~/.cargo/env

@@ -19,6 +19,7 @@ fi
 
 eww daemon
 numlockx &
+emote &
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr

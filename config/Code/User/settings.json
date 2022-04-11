@@ -81,6 +81,7 @@
   "files.exclude": {
     "package-lock.json": true,
     "yarn.lock": true,
+    "pnpm-lock.yaml": true,
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
@@ -91,6 +92,7 @@
   "files.watcherExclude": {
     "package-lock.json": true,
     "yarn.lock": true,
+    "pnpm-lock.yaml": true,
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
@@ -112,7 +114,10 @@
     "*": true,
     "yaml": false,
     "plaintext": true,
-    "markdown": true
+    "markdown": true,
+    "typescript": true,
+    "javascript": true,
+    "haskell": true
   },
   "github.gitAuthentication": true,
   //
@@ -127,6 +132,8 @@
   //
   "liveshare.audio.startCallOnShare": true,
   //
+  "editor.minimap.enabled": false,
+  //
   "oneDarkPro.bold": true,
   //
   "quokka.showCodeLensInOutputChannel": false,
@@ -136,6 +143,7 @@
   "search.exclude": {
     "package-lock.json": true,
     "yarn.lock": true,
+    "pnpm-lock.yaml": true,
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
@@ -172,10 +180,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
@@ -200,5 +208,14 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "python.formatting.provider": "black",
+  "sqltools.useNodeRuntime": true,
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   }
 }

@@ -1,4 +1,4 @@
 {
-    "registry-mirrors":  ["https://docker.uclv.cu"],
-    "insecure-registries": ["http://docker.uclv.cu"]
+    "registry-mirrors":  ["https://localhost:8083"],
+    "insecure-registries": ["http://localhost:8082"]
 }
