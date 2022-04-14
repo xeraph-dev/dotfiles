@@ -217,5 +217,9 @@
   "sqltools.useNodeRuntime": true,
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  }
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "powermode.enabled": true
 }

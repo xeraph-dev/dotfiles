@@ -20,10 +20,12 @@ cp ~/".config/neofetch" "./config" -r
 cp ~/".config/nvim" "./config" -r
 cp ~/".config/picom" "./config" -r
 cp ~/".config/polybar" "./config" -r
+cp ~/".config/pip" "./config" -r
 cp ~/".config/rofi" "./config" -r
 cp ~/".config/starship.toml" "./config" -r
 cp ~/".config/sxhkd" "./config" -r
 cp ~/".config/zathura" "./config" -r
+cp ~/".config/mimeapps.list" "./config"
 
 rm "./etc" -rf
 mkdir "./etc" -p

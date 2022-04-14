@@ -43,11 +43,10 @@
 
 ### Command line tools
 
-- aws-cli
 - bat
 - btop
-- fd
 - feh
+- fzf
 - gnome-keyring
 - inetutils
 - lsd
@@ -56,11 +55,13 @@
 - nethogs
 - numlockx
 - openresolv
-- ripgrep
+- rsync
+- sdkmanager
 - seahorse
 - starship
 - tmux
 - translate-shell
+- unzip
 - wget
 - wmname
 - yt-dlp
@@ -86,10 +87,6 @@
 
 - alacritty
 
-### Design
-
-- inkscape
-
 ### DE appearance
 
 - lxappearance-gtk3
@@ -108,10 +105,15 @@
 
 - flameshot
 - obs-studio
+- simplescreenrecorder
 
 ### Productivity
 - zathura
 - zathura-pdf-poppler
+
+### Entertainment
+
+- steam
 
 ### AUR Helper
 
@@ -131,13 +133,11 @@
 - picom-ibhagwan-git [Aur](https://aur.archlinux.org/packages/picom-ibhagwan-git)
 - polybar [Aur](https://aur.archlinux.org/packages/polybar)
 
-### Notes
-
-- elementary-planner [Aur](https://aur.archlinux.org/packages/elementary-planner)
-
 ### Browsers
 
 - brave-bin [Aur](https://aur.archlinux.org/packages/brave-bin)
+- epiphany
+- firefox
 
 ### Messaging
 
@@ -146,8 +146,6 @@
 
 ### IDE/Editors
 
-- emacs
-  - doom-emacs [GitHub](https://github.com/hlissner/doom-emacs)
 - jetbrains-toolbox [Aur](https://aur.archlinux.org/packages/jetbrains-toolbox)
 - neovim
 - vscode [Aur](https://aur.archlinux.org/packages/visual-studio-code-bin)
@@ -161,11 +159,16 @@
   - nvm [Aur](https://aur.archlinux.org/packages/nvm)
   - serve [npm](https://www.npmjs.com/package/serve)
   - yarn [npm](https://www.npmjs.com/package/yarn)
+  - vercel [npm](https://www.npmjs.com/package/vercel)
+  - vite [npm](https://www.npmjs.com/package/vite)
+  - pnpm [npm](https://www.npmjs.com/package/pnpm)
 - rustup
   - cargo-edit [cargo](https://docs.rs/crate/cargo-edit)
   - cargo-make [cargo](https://docs.rs/cargo-make)
   - cargo-watch [cargo](https://docs.rs/crate/cargo-watch)
   - rustfmt [cargo](https://docs.rs/rustfmt)
+- python
+  - python-pip
 
 ### Fonts
 
