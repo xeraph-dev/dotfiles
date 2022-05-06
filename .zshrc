@@ -50,11 +50,17 @@ alias docker-start="sudo systemctl start docker"
 alias nexus-mount="sudo mount /dev/disk/by-label/nexus /nexus-data"
 alias nexus-docker="docker run -d -p 8081:8081 --rm --name nexus -v /nexus-data:/nexus-data sonatype/nexus3"
 alias open="xdg-open"
+alias time="/usr/bin/time -f 'ram=%M;cpu=%P;exit_status=%x;time=%e'"
+alias ec="expressvpn connect"
+alias ed="expressvpn disconnect"
+alias es="expressvpn status"
+alias copy="rsync -avh"
 
 export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
 export GTK_IM_MODULE=xim
 export npm_config_target_arch=x64
+export DOTNET_CLI_TELEMETRY_OPTOU=1
 
 export ANDROID_HOME=$HOME/android-sdk
 export PATH=$ANDROID_HOME/tools:$PATH
@@ -69,6 +75,16 @@ export PATH=$JUST_HOME:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.emacs.d/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
+export PATH=$HOME/.dotnet/tools:$PATH
 
-source /usr/share/nvm/init-nvm.sh
+eval "$(fnm env --use-on-cd)"
 source ~/.cargo/env
+
+_dotnet_zsh_complete()
+{
+  local completions=("$(dotnet complete "$words")")
+
+  reply=( "${(ps:\n:)completions}" )
+}
+
+compctl -K _dotnet_zsh_complete dotnet

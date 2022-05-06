@@ -25,5 +25,6 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr
 
 setxkbmap -layout us -variant altgr-intl
+xmodmap -e "keycode 135 = dead_greek"
 
 exec bspwm

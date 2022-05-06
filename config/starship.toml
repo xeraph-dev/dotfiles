@@ -1,12 +1,15 @@
 add_newline = false
 
-[character]                        
+[character]
 success_symbol = "[ﬦ](bold green)"
 error_symbol = "[ﬦ](bold red)"
 vicmd_symbol = "[ﬦ](bold blue)"
 
 [aws]
 format = ' [$symbol($profile)(\($region\))(\[$duration\])]($style) '
+
+[c]
+format = ' [$symbol($name $version)]($style) '
 
 [cmake]
 format = ' [$symbol($version)]($style) '
@@ -150,4 +153,3 @@ format = ' [$symbol($version)]($style) '
 
 [zig]
 format = ' [$symbol($version)]($style) '
-

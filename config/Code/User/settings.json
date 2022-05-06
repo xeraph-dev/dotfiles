@@ -1,5 +1,14 @@
 {
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+	"code-runner.executorMap": {
+    "c": "cd $dir && clang $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+  },
   "debug.openDebug": "openOnDebugBreak",
+  //
+  "discord.removeDetails": true,
+  "discord.removeLowerDetails": true,
+  "discord.removeRemoteRepository": true,
+  "discord.removeTimestamp": true,
   //
   "editor.bracketPairColorization.enabled": true,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
@@ -117,7 +126,8 @@
     "markdown": true,
     "typescript": true,
     "javascript": true,
-    "haskell": true
+    "haskell": true,
+    "c": true
   },
   "github.gitAuthentication": true,
   //
@@ -204,7 +214,7 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "johnsoncodehk.volar"
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -221,5 +231,6 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "powermode.enabled": true
+  "powermode.enabled": true,
+  "redhat.telemetry.enabled": false
 }
