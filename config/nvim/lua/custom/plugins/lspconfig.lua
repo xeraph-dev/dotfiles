@@ -11,7 +11,6 @@ M.setup_lsp = function(attach, capabilities)
       "jsonls",
       "remark_ls",
       "taplo",
-      "volar",
       "yamlls",
       "clangd",
       "sumneko_lua",
