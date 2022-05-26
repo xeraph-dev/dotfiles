@@ -2,7 +2,7 @@ local null_ls = require "null-ls"
 local b = null_ls.builtins
 
 local sources = {
-   b.formatting.prettierd.with {
+   b.formatting.prettier.with {
       filetypes = { "html", "markdown", "css", "json", "yaml", "scss", "sass", "jsonc", "graphql" },
    },
 
@@ -18,13 +18,13 @@ local sources = {
    b.formatting.clang_format,
 
    -- Javascript
-   b.code_actions.eslint_d.with {
+   b.code_actions.eslint.with {
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
    },
-   b.diagnostics.eslint_d.with {
+   b.diagnostics.eslint.with {
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
    },
-   b.formatting.eslint_d.with {
+   b.formatting.eslint.with {
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
    },
 
@@ -39,6 +39,13 @@ local sources = {
 
    -- Zsh
    b.diagnostics.zsh,
+
+   -- markdown
+  b.formatting.markdownlint,
+  b.diagnostics.markdownlint,
+
+  -- ReScript
+  b.formatting.rescript,
 }
 
 local M = {}
@@ -49,11 +56,11 @@ M.setup = function()
       sources = sources,
 
       -- format on save
-      on_attach = function(client)
-         if client.resolved_capabilities.document_formatting then
-            vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()"
-         end
-      end,
+      -- on_attach = function(client)
+      -- if client.resolved_capabilities.document_formatting then
+      -- vim.cmd "autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()"
+      -- end
+      -- end,
    }
 end
 

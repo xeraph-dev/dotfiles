@@ -20,7 +20,7 @@ M.options = {
 M.ui = {
    hl_override = {},
    changed_themes = {},
-   colors = "", -- path of your file that contains colors
+   theme_toggle = { "onedark", "one_light" },
    theme = "onedark", -- default theme
    transparency = false,
 }
@@ -30,25 +30,22 @@ M.plugins = {
    remove = {},
 
    options = {
-      packer = {
-         init_file = "plugins.packerInit",
-         snapshot = nil,
-      },
       lspconfig = {
          setup_lspconf = "", -- path of lspconfig file
       },
       statusline = {
          separator_style = "default", -- default/round/slant/block/arrow
       },
+      telescope = {
+         extensions = { "themes", "terms" }
+      }
    },
 
    -- add, modify, remove plugins
    user = {},
 }
 
--- non plugin only
-M.mappings = {
-   misc = function() end,
-}
+-- check core.mappings for table structure
+M.mappings = require "core.mappings"
 
 return M

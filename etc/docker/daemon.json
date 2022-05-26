@@ -1,4 +1,0 @@
-{
-    "registry-mirrors":  ["https://localhost:8083"],
-    "insecure-registries": ["http://localhost:8082"]
-}

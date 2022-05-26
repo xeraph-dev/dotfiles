@@ -1,6 +1,6 @@
-local M = {}
+_G.nvchad = {}
 
-M.close_buffer = function(force)
+nvchad.close_buffer = function(force)
    if vim.bo.buftype == "terminal" then
       vim.api.nvim_win_hide(0)
       return
@@ -22,7 +22,7 @@ M.close_buffer = function(force)
    vim.cmd(close_cmd)
 end
 
-M.load_config = function()
+nvchad.load_config = function()
    local conf = require "core.default_config"
 
    -- attempt to load and merge a user config
@@ -40,7 +40,7 @@ M.load_config = function()
    return conf
 end
 
-M.map = function(mode, keys, command, opt)
+nvchad.map = function(mode, keys, command, opt)
    local options = { silent = true }
 
    if opt then
@@ -49,7 +49,7 @@ M.map = function(mode, keys, command, opt)
 
    if type(keys) == "table" then
       for _, keymap in ipairs(keys) do
-         M.map(mode, keymap, command, opt)
+         nvchad.map(mode, keymap, command, opt)
       end
       return
    end
@@ -57,8 +57,27 @@ M.map = function(mode, keys, command, opt)
    vim.keymap.set(mode, keys, command, opt)
 end
 
+-- For those who disabled whichkey
+
+nvchad.no_WhichKey_map = function()
+   local mappings = nvchad.load_config().mappings
+
+   for key, _ in pairs(mappings) do
+      for mode, _ in pairs(mappings[key]) do
+         for keybind, cmd in pairs(mappings[key][mode]) do
+            -- disabled keys will not have cmd set
+            if cmd ~= "" then
+               nvchad.map(mode, keybind, cmd[1])
+            end
+         end
+      end
+   end
+
+   require("plugins.configs.others").misc_mappings()
+end
+
 -- load plugin after entering vim ui
-M.packer_lazy_load = function(plugin, timer)
+nvchad.packer_lazy_load = function(plugin, timer)
    if plugin then
       timer = timer or 0
       vim.defer_fn(function()
@@ -68,29 +87,21 @@ M.packer_lazy_load = function(plugin, timer)
 end
 
 -- remove plugins defined in chadrc
-M.remove_default_plugins = function(plugins)
-   local removals = require("core.utils").load_config().plugins.remove or {}
+nvchad.remove_default_plugins = function(plugins)
+   local removals = nvchad.load_config().plugins.remove or {}
+
    if not vim.tbl_isempty(removals) then
       for _, plugin in pairs(removals) do
          plugins[plugin] = nil
       end
    end
+
    return plugins
 end
 
 -- merge default/user plugin tables
-M.plugin_list = function(default_plugins)
-   local user_plugins = require("core.utils").load_config().plugins.user
-
-   -- require if string is present
-   local ok
-
-   if type(user_plugins) == "string" then
-      ok, user_plugins = pcall(require, user_plugins)
-      if ok and not type(user_plugins) == "table" then
-         user_plugins = {}
-      end
-   end
+nvchad.plugin_list = function(default_plugins)
+   local user_plugins = nvchad.load_config().plugins.user
 
    -- merge default + user plugin table
    default_plugins = vim.tbl_deep_extend("force", default_plugins, user_plugins)
@@ -106,14 +117,14 @@ M.plugin_list = function(default_plugins)
    return final_table
 end
 
-M.load_override = function(default_table, plugin_name)
-   local user_table = require("core.utils").load_config().plugins.override[plugin_name]
+nvchad.load_override = function(default_table, plugin_name)
+   local user_table = nvchad.load_config().plugins.override[plugin_name]
+
    if type(user_table) == "table" then
       default_table = vim.tbl_deep_extend("force", default_table, user_table)
    else
       default_table = default_table
    end
+
    return default_table
 end
-
-return M

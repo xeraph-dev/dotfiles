@@ -9,7 +9,6 @@ M.setup_lsp = function(attach, capabilities)
       "cssls",
       "tsserver",
       "jsonls",
-      "remark_ls",
       "taplo",
       "yamlls",
       "clangd",
@@ -19,6 +18,7 @@ M.setup_lsp = function(attach, capabilities)
       "dockerls",
       "bashls",
       "cmake",
+      "rescriptls"
    }
 
    for _, lsp in ipairs(servers) do

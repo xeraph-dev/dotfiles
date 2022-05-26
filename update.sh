@@ -33,7 +33,5 @@ rm "./config/nvim/plugin" -rf 2>/dev/null
 
 rm "./etc" -rf
 mkdir "./etc" -p
-mkdir "./etc/docker" -p
 
 cp "/etc/pacman.conf" "./etc"
-cp "/etc/docker/daemon.json" "./etc/docker" -r

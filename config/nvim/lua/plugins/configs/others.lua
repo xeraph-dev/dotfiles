@@ -32,7 +32,7 @@ M.better_escape = function()
       keys = "<Esc>",
    }
 
-   options = require("core.utils").load_override(options, "max397574/better-escape.nvim")
+   options = nvchad.load_override(options, "max397574/better-escape.nvim")
    escape.setup(options)
 end
 
@@ -63,7 +63,7 @@ M.blankline = function()
       show_first_indent_level = false,
    }
 
-   options = require("core.utils").load_override(options, "lukas-reineke/indent-blankline.nvim")
+   options = nvchad.load_override(options, "lukas-reineke/indent-blankline.nvim")
    blankline.setup(options)
 end
 
@@ -93,7 +93,7 @@ M.colorizer = function()
       },
    }
 
-   options = require("core.utils").load_override(options, "NvChad/nvim-colorizer.lua")
+   options = nvchad.load_override(options, "NvChad/nvim-colorizer.lua")
 
    colorizer.setup(options["filetypes"], options["user_default_options"])
    vim.cmd "ColorizerReloadAllBuffers"
@@ -149,7 +149,7 @@ M.signature = function()
       padding = "", -- character to pad on left and right of signature can be ' ', or '|'  etc
    }
 
-   options = require("core.utils").load_override(options, "ray-x/lsp_signature.nvim")
+   options = nvchad.load_override(options, "ray-x/lsp_signature.nvim")
    lsp_signature.setup(options)
 end
 
@@ -211,4 +211,22 @@ M.gitsigns = function()
    }
 end
 
+M.misc_mappings = function()
+   local map = nvchad.map
+
+   -- Don't copy the replaced text after pasting in visual mode
+   map("v", "p", '"_dP')
+
+   -- Allow moving the cursor through wrapped lines with j, k, <Up> and <Down>
+   -- http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
+   -- empty mode is same as using :map
+   -- also don't use g[j|k] when in operator pending mode, so it doesn't alter d, y or c behaviour
+   map("", "j", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', { expr = true })
+   map("", "k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', { expr = true })
+   map("", "<Down>", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', { expr = true })
+   map("", "<Up>", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', { expr = true })
+
+   -- esscape from terminal mode
+   map("t", "jk", "<C-\\><C-n>")
+end
 return M

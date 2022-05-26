@@ -1,6 +1,21 @@
--- local autocmd = vim.api.nvim_create_autocmd
+local autocmd = vim.api.nvim_create_autocmd
 
--- Uncomment this if you want to open nvim with a dir
+-- Disable statusline in dashboard
+autocmd("FileType", {
+   pattern = "alpha",
+   callback = function()
+      vim.opt.laststatus = 0
+   end,
+})
+
+autocmd("BufUnload", {
+   buffer = 0,
+   callback = function()
+      vim.opt.laststatus = 3
+   end,
+})
+
+-- open nvim with a dir while still lazy loading nvimtree
 -- autocmd("BufEnter", {
 --    callback = function()
 --       if vim.api.nvim_buf_get_option(0, "buftype") ~= "terminal" then

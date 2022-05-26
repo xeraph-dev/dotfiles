@@ -49,6 +49,7 @@ alias wg-down="wg-quick down /data/wg.conf"
 alias docker-start="sudo systemctl start docker"
 alias nexus-mount="sudo mount /dev/disk/by-label/nexus /nexus-data"
 alias nexus-docker="docker run -d -p 8081:8081 --rm --name nexus -v /nexus-data:/nexus-data sonatype/nexus3"
+alias verdaccio-docker="docker run --rm -d -p 7001:4873 --name verdaccio verdaccio/verdaccio:5"
 alias open="xdg-open"
 alias time="/usr/bin/time -f 'ram=%M;cpu=%P;exit_status=%x;time=%e'"
 alias ec="expressvpn connect"
@@ -60,7 +61,6 @@ export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
 export GTK_IM_MODULE=xim
 export npm_config_target_arch=x64
-export DOTNET_CLI_TELEMETRY_OPTOU=1
 
 export ANDROID_HOME=$HOME/android-sdk
 export PATH=$ANDROID_HOME/tools:$PATH
@@ -73,18 +73,14 @@ export JUST_TARGET=$JUST_HOME
 export PATH=$JUST_HOME:$PATH
 
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.emacs.d/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
-export PATH=$HOME/.dotnet/tools:$PATH
+export PATH=$HOME/.npm-global/bin:$PATH
 
-eval "$(fnm env --use-on-cd)"
 source ~/.cargo/env
 
-_dotnet_zsh_complete()
-{
-  local completions=("$(dotnet complete "$words")")
+# pnpm
+export PNPM_HOME="/home/xeraph/.pnpm-global"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
 
-  reply=( "${(ps:\n:)completions}" )
-}
-
-compctl -K _dotnet_zsh_complete dotnet
+eval "$(fnm env --use-on-cd)"
