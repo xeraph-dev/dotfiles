@@ -1,32 +1,22 @@
-local present, impatient = pcall(require, "impatient")
-
-if present then
-   impatient.enable_profile()
-end
-
-local modules = {
-   "utils",
-   "options",
-   "autocmds",
-   "commands",
-}
-
-for _, module in ipairs(modules) do
-   local ok, err = pcall(require, "core." .. module)
-
-   if not ok then
-      error("Error loading " .. module .. "\n\n" .. err)
-   end
-end
-
--- check if custom init.lua file exists
-if vim.fn.filereadable(vim.fn.stdpath "config" .. "/lua/custom/init.lua") == 1 then
-   -- try to call custom init, if not successful, show error
-   local ok, err = pcall(require, "custom")
-
-   if not ok then
-      vim.notify("Error loading custom/init.lua\n\n" .. err)
-   end
-
-   return
-end
+require("user.options")
+require("user.keymaps")
+require("user.plugins")
+require("user.colorscheme")
+require("user.cmp")
+require("user.lsp")
+require("user.telescope")
+require("user.treesitter")
+require("user.autopairs")
+require("user.comment")
+require("user.better-scape")
+require("user.gitsigns")
+require("user.nvim-tree")
+require("user.bufferline")
+require("user.lualine")
+require("user.toggleterm")
+require("user.project")
+require("user.impatient")
+require("user.indentline")
+require("user.alpha")
+require("user.whichkey")
+require("user.autocommands")

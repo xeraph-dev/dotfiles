@@ -27,7 +27,4 @@ xsetroot -cursor_name left_ptr
 setxkbmap -layout us -variant altgr-intl
 xmodmap -e "keycode 135 = dead_greek"
 
-oneko -name oneko_neko -fixrootcursor -position '+30' & disown
-oneko -name oneko_sakura -fixrootcursor -position '+30+30' -sakura -toname oneko_neko & disown
-
 exec bspwm

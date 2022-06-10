@@ -231,6 +231,6 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "powermode.enabled": true,
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "nxConsole.enableTelemetry": false
 }

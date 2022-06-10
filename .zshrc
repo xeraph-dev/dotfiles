@@ -56,6 +56,7 @@ alias ec="expressvpn connect"
 alias ed="expressvpn disconnect"
 alias es="expressvpn status"
 alias copy="rsync -avh"
+alias pnx="pnpm nx"
 
 export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
