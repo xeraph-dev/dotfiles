@@ -52,7 +52,6 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim")
 	use("folke/which-key.nvim")
-	use("github/copilot.vim")
 
 	-- Colorschemes
 	use("navarasu/onedark.nvim")
@@ -103,6 +102,10 @@ return packer.startup(function(use)
 
 	-- Terminal
 	use("akinsho/toggleterm.nvim")
+
+	-- GitHub Copilot
+	use("zbirenbaum/copilot.lua")
+	use("zbirenbaum/copilot-cmp")
 
 	-- Automatically set up the configuration after cloning packer.nvim
 	if PACKER_BOOTSTRAP then

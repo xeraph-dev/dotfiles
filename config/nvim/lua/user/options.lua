@@ -33,6 +33,7 @@ local opt = {
 }
 
 local g = {
+	copilot_no_tab_map = true
 }
 
 vim.opt.shortmess:append("c")

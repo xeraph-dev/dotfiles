@@ -54,6 +54,10 @@ null_ls.setup({
 		d.markdownlint,
 
 		-- Go
-		f.gofmt
+		f.gofmt,
+
+		-- Python
+		d.pylint,
+		f.black,
 	},
 })
