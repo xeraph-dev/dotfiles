@@ -32,10 +32,17 @@ local opt = {
 	sidescrolloff = 8,
 }
 
+local g = {
+}
+
 vim.opt.shortmess:append("c")
 
 for k, v in pairs(opt) do
 	vim.opt[k] = v
+end
+
+for k, v in pairs(g) do
+	vim.g[k] = v
 end
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
