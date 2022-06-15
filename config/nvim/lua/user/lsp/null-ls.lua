@@ -11,7 +11,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		f.prettier.with({
-			filetypes = { "html", "markdown", "css", "json", "yaml", "scss", "sass", "jsonc", "graphql" },
+			filetypes = { "html", "markdown", "css", "json", "yaml", "scss", "sass", "jsonc", "graphql", "markdown" },
 		}),
 
 		-- Lua
@@ -48,10 +48,6 @@ null_ls.setup({
 
 		-- Zsh
 		d.zsh,
-
-		-- markdown
-		f.markdownlint,
-		d.markdownlint,
 
 		-- Go
 		f.gofmt,

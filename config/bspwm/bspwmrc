@@ -36,5 +36,12 @@ bspc rule -a Gnome-calculator state=floating center=on
 bspc rule -a flameshot state=floating center=on
 bspc rule -a Com.github.alainm23.planner state=floating center=on
 bspc rule -a SimpleScreenRecorder state=floating center=on
+bspc rule -a Space-invaders state=floating center=on
+
+# Racket rules
+bspc rule -a DrRacket desktop="^1" follow=off
+bspc rule -a DrRacket:*:Preferences state=floating center=on
+bspc rule -a DrRacket:*:Space\ Invaders state=floating center=on
+bspc rule -a DrRacket:*:Package\ Manager state=floating center=on
 
 sh ~/.config/polybar/launch.sh

@@ -14,7 +14,7 @@ local servers = {
 	"graphql",
 	"jsonls",
 	"sumneko_lua",
-	"remark_ls",
+	"zk",
 	"sqlls",
 	"pyright",
 	"clangd",

@@ -51,7 +51,7 @@ map("n", "<S-Right>", ":bnext<CR>", opts)
 map("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 
 -- Null-ls
-map("n", "<leader>fm", "<cmd>lua vim.lsp.buf.formatting_sync(nil, 2000)<CR>", opts)
+map("n", "<C-f>", "<cmd>lua vim.lsp.buf.formatting_sync(nil, 2000)<CR>", opts)
 
 -- Insert --
 -- Press jk fast to escape

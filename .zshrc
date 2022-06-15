@@ -77,7 +77,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.npm-global/bin:$PATH
 
-source ~/.cargo/env
+#source ~/.cargo/env
 
 # pnpm
 export PNPM_HOME="/home/xeraph/.pnpm-global"
