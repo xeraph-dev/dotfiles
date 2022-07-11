@@ -21,16 +21,11 @@ cp ~/".config/neofetch" "./config" -r
 cp ~/".config/nvim/lua/custom" "./config/nvim/lua" -r
 cp ~/".config/picom" "./config" -r
 cp ~/".config/polybar" "./config" -r
-cp ~/".config/pip" "./config" -r
 cp ~/".config/rofi" "./config" -r
 cp ~/".config/starship.toml" "./config" -r
 cp ~/".config/sxhkd" "./config" -r
 cp ~/".config/zathura" "./config" -r
 cp ~/".config/mimeapps.list" "./config"
-
-rm "./config/nvim/.git" -rf 2>/dev/null
-rm "./config/nvim/.gitignore" -rf 2>/dev/null
-rm "./config/nvim/plugin" -rf 2>/dev/null
 
 rm "./etc" -rf
 mkdir "./etc" -p
