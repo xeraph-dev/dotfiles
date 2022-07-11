@@ -8,7 +8,7 @@ rm "./config" -rf 2>/dev/null
 mkdir "./config" -p
 mkdir "./config/btop" -p
 mkdir "./config/Code/User" -p
-mkdir "./config/nvim/lua/custom" -p
+mkdir "./config/nvim/lua" -p
 
 cp ~/".config/alacritty" "./config" -r
 cp ~/".config/bspwm" "./config" -r
@@ -18,7 +18,7 @@ cp ~/".config/eww" "./config" -r
 cp ~/".config/flameshot" "./config" -r
 cp ~/".config/gtk-3.0" "./config" -r
 cp ~/".config/neofetch" "./config" -r
-cp ~/".config/nvim/lua/custom" "./config/nvim/lua/custom" -r
+cp ~/".config/nvim/lua/custom" "./config/nvim/lua" -r
 cp ~/".config/picom" "./config" -r
 cp ~/".config/polybar" "./config" -r
 cp ~/".config/pip" "./config" -r
