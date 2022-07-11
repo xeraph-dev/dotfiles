@@ -1,14 +1,5 @@
 {
-  "C_Cpp.clang_format_fallbackStyle": "LLVM",
-  "code-runner.executorMap": {
-    "c": "cd $dir && clang $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-  },
   "debug.openDebug": "openOnDebugBreak",
-  //
-  "discord.removeDetails": true,
-  "discord.removeLowerDetails": true,
-  "discord.removeRemoteRepository": true,
-  "discord.removeTimestamp": true,
   //
   "editor.bracketPairColorization.enabled": true,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
@@ -125,9 +116,12 @@
     "plaintext": true,
     "markdown": true,
     "typescript": true,
-    "javascript": true,
+    "javascript": false,
     "haskell": true,
-    "c": true
+    "c": true,
+    "sml": false,
+    "hdl": false,
+    "asm": false
   },
   "github.gitAuthentication": true,
   //
@@ -136,15 +130,10 @@
   },
   "gitlens.codeLens.scopes": ["containers", "document"],
   //
-  "haskell.formattingProvider": "stylish-haskell",
-  //
   "javascript.updateImportsOnFileMove.enabled": "always",
   //
-  "liveshare.audio.startCallOnShare": true,
-  //
-  "editor.minimap.enabled": false,
-  //
   "oneDarkPro.bold": true,
+  "oneDarkPro.italic": true,
   //
   "quokka.showCodeLensInOutputChannel": false,
   //
@@ -166,8 +155,6 @@
   },
   //
   "security.workspace.trust.untrustedFiles": "open",
-  //
-  "shellformat.path": "/usr/bin/shfmt",
   //
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
@@ -224,13 +211,16 @@
     "editor.tabSize": 4
   },
   "python.formatting.provider": "black",
-  "sqltools.useNodeRuntime": true,
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "redhat.telemetry.enabled": false,
-  "nxConsole.enableTelemetry": false
+  "[racket]": {
+    "editor.defaultFormatter": "evzen-wybitul.magic-racket"
+  },
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "svelte.enable-ts-plugin": true
 }

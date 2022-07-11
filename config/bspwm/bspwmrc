@@ -14,6 +14,7 @@ bspc config gapless_monocle true
 
 bspc rule -a jetbrains-webstorm desktop='^1' follow=off
 bspc rule -a jetbrains-studio desktop='^1' follow=off
+bspc rule -a jetbrains-idea desktop='^1' follow=off
 bspc rule -a Code desktop='^1' follow=off
 bspc rule -a Emacs desktop="^1" follow=off state=tiled
 bspc rule -a Brave-browser desktop='^2' follow=off
@@ -37,11 +38,13 @@ bspc rule -a flameshot state=floating center=on
 bspc rule -a Com.github.alainm23.planner state=floating center=on
 bspc rule -a SimpleScreenRecorder state=floating center=on
 bspc rule -a Space-invaders state=floating center=on
+bspc rule -a VirtualBox\ Manager state=floating
 
 # Racket rules
 bspc rule -a DrRacket desktop="^1" follow=off
 bspc rule -a DrRacket:*:Preferences state=floating center=on
-bspc rule -a DrRacket:*:Space\ Invaders state=floating center=on
 bspc rule -a DrRacket:*:Package\ Manager state=floating center=on
+bspc rule -a DrRacket:*:Space\ Invaders state=floating center=on
+bspc rule -a DrRacket:*:Sudoku state=floating center=on follow=off
 
 sh ~/.config/polybar/launch.sh

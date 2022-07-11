@@ -141,4 +141,5 @@ super + Prior
     cmus-remote --prev
 
 super + d
-  alacritty -o window.opacity=1
+		code
+ 	
