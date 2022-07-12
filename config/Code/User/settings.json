@@ -222,5 +222,7 @@
   },
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "dashboard.projectData": null,
+  "redhat.telemetry.enabled": false
 }

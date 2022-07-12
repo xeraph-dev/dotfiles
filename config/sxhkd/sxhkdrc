@@ -141,5 +141,5 @@ super + Prior
     cmus-remote --prev
 
 super + d
-		code
+    code -n
  	

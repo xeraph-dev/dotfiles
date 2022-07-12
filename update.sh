@@ -4,6 +4,8 @@ cp ~/".xinitrc" .
 cp ~/".zprofile" .
 cp ~/".zshrc" .
 
+cp ~/".doom.d" . -r
+
 rm "./config" -rf 2>/dev/null
 mkdir "./config" -p
 mkdir "./config/btop" -p
