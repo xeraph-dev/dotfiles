@@ -56,6 +56,9 @@ alias pnx="pnpm nx"
 alias wg-fa-up="wg-quick up /data/wg-fa.conf"
 alias wg-fa-down="wg-quick down /data/wg-fa.conf"
 
+# Flatpak aliases
+alias figma="flatpak run io.github.Figma_Linux.figma_linux"
+
 export EDITOR=nvim
 export _JAVA_AWT_WM_NONREPARENTING=1
 export GTK_IM_MODULE=xim
