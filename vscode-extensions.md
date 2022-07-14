@@ -42,6 +42,7 @@
   - [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
   - [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
   - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+  - [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
   - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
   - [Live Server Preview](https://marketplace.visualstudio.com/items?itemName=negokaz.live-server-preview)
   - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
@@ -72,8 +73,10 @@
 
   - [Haskell](https://marketplace.visualstudio.com/items?itemName=haskell.haskell)
   - [Haskell Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=justusadam.language-haskell)
+  - [Haskell GHCi Debug Adapter Phoityne](https://marketplace.visualstudio.com/items?itemName=phoityne.phoityne-vscode)
 
 - #### Themes
 
+  - [Ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu)
   - [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
   - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
