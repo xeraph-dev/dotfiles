@@ -54,6 +54,18 @@
   - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
   - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
+- #### PureScript
+
+  - [Dhall Language Support](https://marketplace.visualstudio.com/items?itemName=dhall.dhall-lang)
+  - [Dhall LSP Server](https://marketplace.visualstudio.com/items?itemName=dhall.vscode-dhall-lsp-server)
+  - [PureScript IDE](https://marketplace.visualstudio.com/items?itemName=nwolverson.ide-purescript)
+  - [PureScript Language Support](https://marketplace.visualstudio.com/items?itemName=nwolverson.language-purescript)
+
+- #### Ruby
+
+  - [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby)
+  - [VSCode Ruby](https://marketplace.visualstudio.com/items?itemName=wingrunr21.vscode-ruby)
+
 - #### Python
 
   - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
