@@ -99,3 +99,9 @@ eval "$(fnm env --use-on-cd)"
 # Bun
 export BUN_INSTALL="/home/xeraph/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+[ -f "/home/xeraph/.ghcup/env" ] && source "/home/xeraph/.ghcup/env" # ghcup-env
+
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+eval "$(stack --bash-completion-script stack)"

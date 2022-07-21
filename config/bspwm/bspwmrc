@@ -40,6 +40,7 @@ bspc rule -a SimpleScreenRecorder state=floating center=on
 bspc rule -a Space-invaders state=floating center=on
 bspc rule -a VirtualBox\ Manager state=floating
 bspc rule -a Protonvpn state=floating
+bspc rule -a calculator state=floating
 
 # Racket rules
 bspc rule -a DrRacket desktop="^1" follow=off

@@ -8,7 +8,6 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
-  "editor.guides.bracketPairs": true,
   "editor.hover.delay": 500,
   "editor.inlineSuggest.enabled": true,
   "editor.linkedEditing": true,
@@ -75,7 +74,8 @@
   //,
   "files.associations": {
     ".browserslistrc": "plaintext",
-    ".postcssrc": "jsonc"
+    ".postcssrc": "jsonc",
+    "LICENSE": "plaintext"
   },
   "files.autoSave": "off",
   "files.exclude": {
@@ -87,7 +87,8 @@
     "**/.settings": true,
     "**/.factorypath": true,
     "**/.idea": true,
-    "**/node_modules/*/**": true
+    "**/node_modules/*/**": true,
+    "*~": true
   },
   "files.watcherExclude": {
     "package-lock.json": true,
@@ -101,7 +102,8 @@
     "**/.vscode": true,
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
-    "**/node_modules/*/**": true
+    "**/node_modules/*/**": true,
+    "*~": true
   },
   //
   "formattingToggle.affects": ["editor.formatOnSave"],
@@ -117,11 +119,13 @@
     "markdown": true,
     "typescript": true,
     "javascript": false,
-    "haskell": true,
+    "haskell": false,
     "c": true,
     "sml": false,
     "hdl": false,
-    "asm": false
+    "asm": false,
+    "happy": false,
+    "alex": false
   },
   "github.gitAuthentication": true,
   //
@@ -151,7 +155,8 @@
     "**/.vscode": true,
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
-    "**/node_modules/*/**": true
+    "**/node_modules/*/**": true,
+    "*~": true
   },
   //
   "security.workspace.trust.untrustedFiles": "open",
@@ -166,7 +171,7 @@
   "update.mode": "none",
   //
   "window.menuBarVisibility": "toggle",
-  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.colorTheme": "Ayu Dark",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
   //,
@@ -201,7 +206,7 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[vue]": {
-    "editor.defaultFormatter": "johnsoncodehk.volar"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -224,5 +229,14 @@
   "python.analysis.inlayHints.functionReturnTypes": true,
   "svelte.enable-ts-plugin": true,
   "dashboard.projectData": null,
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "haskell.manageHLS": "GHCup",
+  "haskell.ghcupExecutablePath": "~/.ghcup/bin/ghcup",
+  "haskell.formattingProvider": "stylish-haskell",
+  "jest.autoRun": "off",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "editor.guides.bracketPairs": true
 }

@@ -20,6 +20,7 @@
   - [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)
   - [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime)
   - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
+  - [filesize](https://marketplace.visualstudio.com/items?itemName=mkxml.vscode-filesize)
 
 - #### Rust
 
