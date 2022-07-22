@@ -21,6 +21,12 @@
   - [WakaTime](https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime)
   - [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
   - [filesize](https://marketplace.visualstudio.com/items?itemName=mkxml.vscode-filesize)
+  - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview)
+  - [Lorem ipsum](https://marketplace.visualstudio.com/items?itemName=Tyriar.lorem-ipsum)
+  - [Output Colorizer](https://marketplace.visualstudio.com/items?itemName=IBM.output-colorizer)
+  - [SVG Viewer](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
+  - [Yuck](https://marketplace.visualstudio.com/items?itemName=eww-yuck.yuck)
+  - [shell-format](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format)
 
 - #### Rust
 
@@ -86,7 +92,6 @@
 
   - [Haskell](https://marketplace.visualstudio.com/items?itemName=haskell.haskell)
   - [Haskell Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=justusadam.language-haskell)
-  - [Haskell GHCi Debug Adapter Phoityne](https://marketplace.visualstudio.com/items?itemName=phoityne.phoityne-vscode)
 
 - #### Themes
 
