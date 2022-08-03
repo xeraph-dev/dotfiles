@@ -49,4 +49,7 @@ bspc rule -a DrRacket:*:Package\ Manager state=floating center=on
 bspc rule -a DrRacket:*:Space\ Invaders state=floating center=on
 bspc rule -a DrRacket:*:Sudoku state=floating center=on follow=off
 
+# Nand2tetris tools
+bspc rule -a VMEmulatorMain state=floating center=on follow=off
+
 sh ~/.config/polybar/launch.sh

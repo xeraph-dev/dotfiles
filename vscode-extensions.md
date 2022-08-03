@@ -58,6 +58,7 @@
   - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
   - [React Native Tools](https://marketplace.visualstudio.com/items?itemName=msjsdiag.vscode-react-native)
   - [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+  - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
   - [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
   - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
@@ -92,6 +93,7 @@
 
   - [Haskell](https://marketplace.visualstudio.com/items?itemName=haskell.haskell)
   - [Haskell Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=justusadam.language-haskell)
+  - [stylish-haskell](https://marketplace.visualstudio.com/items?itemName=vigoo.stylish-haskell)
 
 - #### Themes
 

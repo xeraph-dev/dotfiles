@@ -1,6 +1,6 @@
 {
+  "dashboard.projectData": null,
   "debug.openDebug": "openOnDebugBreak",
-  //
   "editor.bracketPairColorization.enabled": true,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
@@ -13,65 +13,20 @@
   "editor.linkedEditing": true,
   "editor.tabSize": 2,
   "editor.suggestSelection": "first",
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "name": "One Dark italic",
-        "scope": [
-          "comment",
-          "entity.other.attribute-name",
-          "keyword",
-          "markup.underline.link",
-          "storage.modifier",
-          "storage.type",
-          "string.url",
-          "variable.language.super",
-          "variable.language.this"
-        ],
-        "settings": {
-          "fontStyle": "italic"
-        }
-      },
-      {
-        "name": "One Dark italic reset",
-        "scope": [
-          "keyword.operator",
-          "keyword.other.type",
-          "storage.modifier.import",
-          "storage.modifier.package",
-          "storage.type.built-in",
-          "storage.type.function.arrow",
-          "storage.type.generic",
-          "storage.type.java",
-          "storage.type.primitive"
-        ],
-        "settings": {
-          "fontStyle": ""
-        }
-      }
-    ]
-  },
-  //
+  "editor.guides.bracketPairs": true,
+  "editor.renderWhitespace": "trailing",
+  "editor.insertSpaces": true,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
   "emmet.includeLanguages": {
     "postcss": "css"
   },
   "emmet.syntaxProfiles": {
     "postcss": "css"
   },
-  //
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.run": "onSave",
-  "eslint.validate": [
-    "html",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  //
   "explorer.confirmDelete": false,
-  //,
   "files.associations": {
     ".browserslistrc": "plaintext",
     ".postcssrc": "jsonc",
@@ -105,13 +60,10 @@
     "**/node_modules/*/**": true,
     "*~": true
   },
-  //
   "formattingToggle.affects": ["editor.formatOnSave"],
-  //
-  "git.autofetch": true,
+  "git.autofetch": false,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  //
   "github.copilot.enable": {
     "*": true,
     "yaml": false,
@@ -128,21 +80,22 @@
     "alex": false
   },
   "github.gitAuthentication": true,
-  //
   "gitlens.advanced.messages": {
     "suppressLineUncommittedWarning": true
   },
   "gitlens.codeLens.scopes": ["containers", "document"],
-  //
+  "haskell.manageHLS": "GHCup",
+  "haskell.ghcupExecutablePath": "~/.ghcup/bin/ghcup",
+  "haskell.formattingProvider": "stylish-haskell",
+  "haskell.upgradeGHCup": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  //
-  "oneDarkPro.bold": true,
-  "oneDarkPro.italic": true,
-  //
+  "jest.autoRun": "off",
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.formatting.provider": "black",
   "quokka.showCodeLensInOutputChannel": false,
-  //
+  "redhat.telemetry.enabled": false,
   "rest-client.enableTelemetry": false,
-  //
   "search.exclude": {
     "package-lock.json": true,
     "yarn.lock": true,
@@ -158,23 +111,16 @@
     "**/node_modules/*/**": true,
     "*~": true
   },
-  //
   "security.workspace.trust.untrustedFiles": "open",
-  //
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
+  "svelte.enable-ts-plugin": true,
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  //
   "typescript.updateImportsOnFileMove.enabled": "always",
-  //
   "update.mode": "none",
-  //
   "window.menuBarVisibility": "toggle",
   "workbench.colorTheme": "Ayu Dark",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
-  //,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -200,7 +146,7 @@
     "editor.tabSize": 4
   },
   "[haskell]": {
-    "editor.defaultFormatter": "haskell.haskell"
+    "editor.defaultFormatter": "vigoo.stylish-haskell"
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
@@ -209,34 +155,18 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[python]": {
-    "editor.insertSpaces": true,
     "editor.tabSize": 4
   },
-  "python.formatting.provider": "black",
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[racket]": {
-    "editor.defaultFormatter": "evzen-wybitul.magic-racket"
-  },
-  "python.analysis.inlayHints.variableTypes": true,
-  "python.analysis.inlayHints.functionReturnTypes": true,
-  "svelte.enable-ts-plugin": true,
-  "dashboard.projectData": null,
-  "redhat.telemetry.enabled": false,
-  "haskell.manageHLS": "GHCup",
-  "haskell.ghcupExecutablePath": "~/.ghcup/bin/ghcup",
-  "haskell.formattingProvider": "stylish-haskell",
-  "jest.autoRun": "off",
-  "editor.unicodeHighlight.ambiguousCharacters": false,
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "editor.guides.bracketPairs": true
+  }
 }

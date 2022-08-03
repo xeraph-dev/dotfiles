@@ -7,7 +7,7 @@ window:
   title: Alacritty
   dynamic_title: true
   gtk_theme_variant: dark
-  opacity: 0.4
+  opacity: 0.0
 
 font:
   size: 12

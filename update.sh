@@ -32,5 +32,7 @@ cp ~/".config/mimeapps.list" "./config"
 
 rm "./etc" -rf
 mkdir "./etc" -p
+mkdir "./etc/default" -p
 
 cp "/etc/pacman.conf" "./etc"
+cp "/etc/default/grub" "./etc/default"
