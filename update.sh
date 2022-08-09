@@ -36,3 +36,5 @@ mkdir "./etc/default" -p
 
 cp "/etc/pacman.conf" "./etc"
 cp "/etc/default/grub" "./etc/default"
+
+cp "$HOME/.local/bin/coursera_downloader" "./scripts"

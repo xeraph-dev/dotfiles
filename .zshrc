@@ -84,24 +84,24 @@ export PATH=$HOME/.emacs.d/bin:$PATH
 
 export PATH=/new-data/flutter-sdk/bin:$PATH
 
-#source ~/.cargo/env
-
 # pnpm
-export PNPM_HOME="/home/xeraph/.pnpm-global"
+export PNPM_HOME="$HOME/.pnpm-global"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 eval "$(fnm env --use-on-cd)"
 
 # bun completions
-[ -s "/home/xeraph/.bun/_bun" ] && source "/home/xeraph/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # Bun
-export BUN_INSTALL="/home/xeraph/.bun"
+export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-[ -f "/home/xeraph/.ghcup/env" ] && source "/home/xeraph/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
 
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 eval "$(stack --bash-completion-script stack)"
+
+[ -f "$HOME/.nix-profile/etc/profile.d/nix.sh" ] && source "$HOME/.nix-profile/etc/profile.d/nix.sh"

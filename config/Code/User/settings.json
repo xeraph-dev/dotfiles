@@ -26,6 +26,13 @@
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.run": "onSave",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro", // Enable .astro
+    "typescript", // Enable .ts
+    "typescriptreact" // Enable .tsx
+  ],
   "explorer.confirmDelete": false,
   "files.associations": {
     ".browserslistrc": "plaintext",
@@ -90,6 +97,7 @@
   "haskell.upgradeGHCup": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "jest.autoRun": "off",
+  "prettier.documentSelectors": ["**/*.astro"],
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.formatting.provider": "black",
@@ -168,5 +176,8 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   }
 }
