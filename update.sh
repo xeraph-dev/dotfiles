@@ -1,40 +1,42 @@
 #!/bin/sh
 
-cp ~/".xinitrc" .
-cp ~/".zprofile" .
-cp ~/".zshrc" .
+cp "$HOME/.xinitrc" .
+cp "$HOME/.zprofile" .
+cp "$HOME/.zshrc" .
 
-cp ~/".doom.d" . -r
+cp "$HOME/.doom.d" . -r
 
-rm "./config" -rf 2>/dev/null
-mkdir "./config" -p
-mkdir "./config/btop" -p
-mkdir "./config/Code/User" -p
-mkdir "./config/nvim/lua" -p
+rm "./.config" -rf 2>/dev/null
+mkdir "./.config" -p
+mkdir "./.config/btop" -p
+mkdir "./.config/Code/User" -p
+mkdir "./.config/nvim/lua" -p
 
-cp ~/".config/alacritty" "./config" -r
-cp ~/".config/bspwm" "./config" -r
-cp ~/".config/btop/btop.conf" "./config/btop"
-cp ~/".config/Code/User/settings.json" "./config/Code/User"
-cp ~/".config/eww" "./config" -r
-cp ~/".config/flameshot" "./config" -r
-cp ~/".config/gtk-3.0" "./config" -r
-cp ~/".config/neofetch" "./config" -r
-cp ~/".config/nvim/lua/custom" "./config/nvim/lua" -r
-cp ~/".config/picom" "./config" -r
-cp ~/".config/polybar" "./config" -r
-cp ~/".config/ranger" "./config" -r
-cp ~/".config/rofi" "./config" -r
-cp ~/".config/starship.toml" "./config" -r
-cp ~/".config/sxhkd" "./config" -r
-cp ~/".config/zathura" "./config" -r
-cp ~/".config/mimeapps.list" "./config"
+cp "$HOME/.config/alacritty" "./.config" -r
+cp "$HOME/.config/bspwm" "./.config" -r
+cp "$HOME/.config/btop/btop.conf" "./.config/btop"
+cp "$HOME/.config/Code/User/settings.json" "./.config/Code/User"
+cp "$HOME/.config/eww" "./.config" -r
+cp "$HOME/.config/flameshot" "./.config" -r
+cp "$HOME/.config/gtk-3.0" "./.config" -r
+cp "$HOME/.config/neofetch" "./.config" -r
+cp "$HOME/.config/nvim/lua/custom" "./.config/nvim/lua" -r
+cp "$HOME/.config/picom" "./.config" -r
+cp "$HOME/.config/polybar" "./.config" -r
+cp "$HOME/.config/ranger" "./.config" -r
+cp "$HOME/.config/rofi" "./.config" -r
+cp "$HOME/.config/starship.toml" "./.config" -r
+cp "$HOME/.config/sxhkd" "./.config" -r
+cp "$HOME/.config/zathura" "./.config" -r
+cp "$HOME/.config/mimeapps.list" "./.config"
 
 rm "./etc" -rf
-mkdir "./etc" -p
 mkdir "./etc/default" -p
 
 cp "/etc/pacman.conf" "./etc"
 cp "/etc/default/grub" "./etc/default"
 
-cp "$HOME/.local/bin/coursera_downloader" "./scripts"
+rm "./.local" -rf
+mkdir "./.local/bin" -p
+
+cp "$HOME/.local/bin/coursera_downloader" "./.local/bin"

@@ -1,0 +1,129 @@
+#!/usr/bin/env python
+
+from os import getcwd, mkdir, path
+import sys
+import yaml
+import requests
+from tqdm import tqdm
+
+curr = getcwd()
+
+
+class color:
+    reset = "\033[0m"
+
+    class fg:
+        red = "\033[31m"
+        green = "\033[32m"
+        orange = "\033[33m"
+        blue = "\033[34m"
+        purple = "\033[35m"
+
+    def fg_red(s: str) -> str:
+        return f"{color.fg.red}{s}{color.reset}"
+
+    def fg_green(s: str) -> str:
+        return f"{color.fg.green}{s}{color.reset}"
+
+    def fg_orange(s: str) -> str:
+        return f"{color.fg.orange}{s}{color.reset}"
+
+    def fg_blue(s: str) -> str:
+        return f"{color.fg.blue}{s}{color.reset}"
+
+    def fg_purple(s: str) -> str:
+        return f"{color.fg.purple}{s}{color.reset}"
+
+
+def print_help(err: str = "") -> None:
+    print(
+        f"""\
+Coursera downloader
+Usage: {color.fg_green("coursera_downloader")} {color.fg_orange("<file_name>")}.{color.fg_orange("<yml|yaml>")}
+
+Example of {color.fg_purple("yaml")} file:
+{color.fg_orange("Week 1")}:
+    {color.fg_orange("<Video title 1>")}:
+        vid: {color.fg_orange("<video 1 url>")}
+        sub: {color.fg_orange("<subtitles 1 url>")}
+    {color.fg_orange("<Video title 2>")}:
+        vid: {color.fg_orange("<video 2 url>")}
+        sub: {color.fg_orange("<subtitles 2 url>")}
+        
+{color.fg_orange("Week 2")}:
+    {color.fg_orange("<Video title>")}:
+        vid: {color.fg_orange("<video url>")}
+        sub: {color.fg_orange("<subtitles url>")}
+
+...
+
+Notes:
+The files and folders are created in the current path, if {color.fg_green("pwd")} is {color.fg_blue("/home/user/Download")}, \
+the folder structure will be {color.fg_blue("/home/user/Download/")}{color.fg_orange("<Week #>")}{color.fg_blue("/")}{color.fg_orange("<Video title #>")}.{color.fg_orange("<mp4|vtt>")}
+{color.fg_orange("Week 1")} and {color.fg_orange("Week 2")} (or anything that you put, are created automatically if not exists)
+Files are downlaoded with streams
+
+{err}\
+"""
+    )
+
+
+if sys.argv[1] == "--help":
+    print_help()
+    sys.exit(0)
+
+if not sys.argv[1].endswith(".yml") and not sys.argv[1].endswith(".yaml"):
+    print_help(
+        f"""{color.fg_red("File does not have")} {color.fg_purple("yml")} {color.fg_red("or")} {color.fg_purple("yaml")} {color.fg_red("extension")}"""
+    )
+    sys.exit(1)
+
+if not path.exists(sys.argv[1]):
+    print_help(
+        f"""{color.fg_red("File")} {color.fg_blue(sys.argv[1])} {color.fg_red("does not exists")}"""
+    )
+    sys.exit(1)
+
+
+def download(dir: str, name: str, url: str, ext: str, desc: str):
+    p = path.join(curr, dir, f"{name}.{ext}")
+    r = requests.head(url)
+    rsize = r.headers["Content-Length"]
+    size = path.getsize(p) if path.exists(p) else 0
+    if int(size) != int(rsize):
+        r = requests.get(url, stream=True, headers={"Range": f"bytes={size}-"})
+        if r.status_code >= 200 and r.status_code < 300:
+            with tqdm.wrapattr(
+                open(p, "ab"),
+                "write",
+                unit="B",
+                unit_scale=True,
+                unit_divisor=1024,
+                miniters=1,
+                desc=desc,
+                total=int(rsize) - int(size),
+            ) as f:
+                for chunk in r.iter_content(chunk_size=1024):
+                    f.write(chunk)
+
+
+try:
+    with open(sys.argv[1], "r") as f:
+        m = yaml.safe_load(f)
+        for k, v in m.items():
+            print(k)
+            if not path.exists(k):
+                mkdir(k)
+            if v:
+                for i, j in v.items():
+                    name = str(i).replace("/", "_")
+                    print(name)
+
+                    download(k, name, j["sub"], "vtt", "subtitles")
+                    download(k, name, j["vid"], "mp4", "video")
+
+                    print()
+
+except KeyboardInterrupt:
+    # quit
+    sys.exit()
