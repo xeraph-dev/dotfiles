@@ -1,0 +1,2 @@
+Server = https://mirrors.kernel.org/archlinux/$repo/os/$arch
+Server = https://mirrors.mit.edu/archlinux/$repo/os/$arch

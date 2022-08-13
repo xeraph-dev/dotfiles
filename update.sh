@@ -30,9 +30,11 @@ cp "$HOME/.config/mimeapps.list" "./.config"
 
 rm "./etc" -rf
 mkdir "./etc/default" -p
+mkdir "./etc/pacman.d" -p
 
 cp "/etc/pacman.conf" "./etc"
 cp "/etc/default/grub" "./etc/default"
+cp "/etc/pacman.d/mirrorlist" "./etc/pacman.d"
 
 rm "./.local" -rf
 mkdir "./.local/bin" -p
