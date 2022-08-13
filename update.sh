@@ -9,13 +9,11 @@ cp "$HOME/.doom.d" . -r
 rm "./.config" -rf 2>/dev/null
 mkdir "./.config" -p
 mkdir "./.config/btop" -p
-mkdir "./.config/Code/User" -p
 mkdir "./.config/nvim/lua" -p
 
 cp "$HOME/.config/alacritty" "./.config" -r
 cp "$HOME/.config/bspwm" "./.config" -r
 cp "$HOME/.config/btop/btop.conf" "./.config/btop"
-cp "$HOME/.config/Code/User/settings.json" "./.config/Code/User"
 cp "$HOME/.config/eww" "./.config" -r
 cp "$HOME/.config/flameshot" "./.config" -r
 cp "$HOME/.config/gtk-3.0" "./.config" -r

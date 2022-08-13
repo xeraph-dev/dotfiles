@@ -16,7 +16,7 @@
 - [Icons Theme](https://www.gnome-look.org/p/1279924/)
 - [Cursor](https://www.gnome-look.org/p/1360254/)
 - [Grub Theme](https://www.pling.com/p/1603282/)
-- [Editors](./editos.md)
+- [Editors](./editors.md)
 
 ### Desktop
 

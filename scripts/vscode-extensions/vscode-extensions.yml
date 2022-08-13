@@ -1,0 +1,84 @@
+Theme:
+  - teabyii.ayu
+  - miguelsolorio.fluent-icons
+  - miguelsolorio.symbols
+
+General:
+  - aaron-bond.better-comments
+  - bungcip.better-toml
+  - mikestead.dotenv
+  - hediet.vscode-drawio
+  - EditorConfig.EditorConfig
+  - usernamehw.errorlens
+  - mkxml.vscode-filesize
+  - tombonnike.vscode-status-bar-format-toggle
+  - ms-vsliveshare.vsliveshare
+  - ms-vsliveshare.vsliveshare-audio
+  - Tyriar.lorem-ipsum
+  - IBM.output-colorizer
+  - christian-kohler.path-intellisense
+  - kruemelkatze.vscode-dashboard
+  - ms-vscode-remote.remote-ssh
+  - ms-vscode-remote.remote-ssh-edit
+  - humao.rest-client
+  - SimonSiefke.svg-preview
+  - wayou.vscode-todo-highlight
+  - tomoki1207.pdf
+  - WakaTime.vscode-wakatime
+  - redhat.vscode-yaml
+
+Markdown:
+  - yzhang.markdown-all-in-one
+  - bierner.markdown-mermaid
+  - DavidAnson.vscode-markdownlint
+
+Git:
+  - mhutchie.git-graph
+  - donjayamanne.githistory
+  - GitHub.copilot
+  - GitHub.vscode-pull-request-github
+  - codezombiech.gitignore
+  - eamodio.gitlens
+
+Shell:
+  - mads-hartmann.bash-ide-vscode
+  - foxundermoon.shell-format
+  - timonwong.shellcheck
+
+Web:
+  - astro-build.astro-vscode
+  - kamikillerto.vscode-colorize
+  - phoenisx.cssvar
+  - dsznajder.es7-react-js-snippets
+  - dbaeumer.vscode-eslint
+  - ecmel.vscode-html-css
+  - kisstkondoros.vscode-gutter-preview
+  - wix.vscode-import-cost
+  - xabikos.JavaScriptSnippets
+  - Orta.vscode-jest
+  - ritwickdey.LiveServer
+  - negokaz.live-server-preview
+  - esbenp.prettier-vscode
+  - WallabyJs.quokka-vscode
+  - svelte.svelte-vscode
+  - bradlc.vscode-tailwindcss
+  - octref.vetur
+  - Vue.volar
+
+Python:
+  - ms-toolsai.jupyter
+  - ms-toolsai.jupyter-keymap
+  - ms-toolsai.jupyter-renderers
+  - ms-python.vscode-pylance
+  - ms-python.python
+  - KevinRose.vsc-python-indent
+
+Rust:
+  - serayuzgur.crates
+  - rust-lang.rust-analyzer
+  - belfz.search-crates-io
+
+Haskell:
+  - haskell.haskell
+  - justusadam.language-haskell
+  - vigoo.stylish-haskell

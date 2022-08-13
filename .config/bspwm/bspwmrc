@@ -16,6 +16,7 @@ bspc rule -a jetbrains-webstorm desktop='^1' follow=off
 bspc rule -a jetbrains-studio desktop='^1' follow=off
 bspc rule -a jetbrains-idea desktop='^1' follow=off
 bspc rule -a Code desktop='^1' follow=off
+bspc rule -a Code\ -\ Insiders desktop='^1' follow=off
 bspc rule -a Emacs desktop="^1" follow=off state=tiled
 bspc rule -a Brave-browser desktop='^2' follow=off
 bpsc rule -a firefox desktop='^2' follow=off
