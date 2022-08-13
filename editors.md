@@ -6,8 +6,7 @@
 
 ### [VS Code](https://code.visualstudio.com/)
 
-- [Extensions](./vscode-extensions.md)
-- [Configuration](./config/Code/User/settings.json)
+- [Extensions](./vscode-extensions.md) | <https://adrianlopez.site/vscode-extensions>
 
 ![vscode](screenshots/vscode.png)
 

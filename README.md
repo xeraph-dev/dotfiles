@@ -10,7 +10,7 @@
 | ----------------------------------- | --------------------------- | ----------------------------------------------------- |
 | [Alacritty](https://alacritty.org/) | [Zsh](https://www.zsh.org/) | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/) |
 
-- [Installation](./installation.md)
+- [Installation](./installation.md) | <https://adrianlopez.site/arch-install>
 - [Packages](./package.md)
 - [GTK3 Theme](https://www.gnome-look.org/p/1357889/)
 - [Icons Theme](https://www.gnome-look.org/p/1279924/)
