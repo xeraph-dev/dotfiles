@@ -14,3 +14,4 @@ application/json=visual-studio-code.desktop
 text/x-script.python=visual-studio-code.desktop
 text/x-shellscript=visual-studio-code.desktop
 x-scheme-handler/fleet=Fleet.desktop
+x-scheme-handler/msteams=teams.desktop

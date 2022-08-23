@@ -55,6 +55,7 @@ alias copy="rsync -avh"
 alias pnx="pnpm nx"
 alias wg-fa-up="wg-quick up /data/wg-fa.conf"
 alias wg-fa-down="wg-quick down /data/wg-fa.conf"
+alias ipcam="run-videochat -h 640 -w 360 -f counterclockwise -i"
 
 # Flatpak aliases
 alias figma="flatpak run io.github.Figma_Linux.figma_linux"
@@ -81,6 +82,8 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.npm-global/bin:$PATH
 export PATH=$HOME/.emacs.d/bin:$PATH
+
+export PATH=$HOME/.cargo/bin:$PATH
 
 export PATH=/new-data/flutter-sdk/bin:$PATH
 

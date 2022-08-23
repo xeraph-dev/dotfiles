@@ -6,6 +6,8 @@ Theme:
 General:
   - aaron-bond.better-comments
   - bungcip.better-toml
+  - ultram4rine.vscode-choosealicense
+  - formulahendry.code-runner
   - mikestead.dotenv
   - hediet.vscode-drawio
   - EditorConfig.EditorConfig
@@ -21,7 +23,7 @@ General:
   - ms-vscode-remote.remote-ssh
   - ms-vscode-remote.remote-ssh-edit
   - humao.rest-client
-  - SimonSiefke.svg-preview
+  - jock.svg
   - wayou.vscode-todo-highlight
   - tomoki1207.pdf
   - WakaTime.vscode-wakatime
@@ -56,14 +58,18 @@ Web:
   - wix.vscode-import-cost
   - xabikos.JavaScriptSnippets
   - Orta.vscode-jest
+  - bierner.lit-html
+  - runem.lit-plugin
   - ritwickdey.LiveServer
   - negokaz.live-server-preview
   - esbenp.prettier-vscode
   - WallabyJs.quokka-vscode
+  - stylelint.vscode-stylelint
   - svelte.svelte-vscode
   - bradlc.vscode-tailwindcss
   - octref.vetur
   - Vue.volar
+  - webhint.vscode-webhint
 
 Python:
   - ms-toolsai.jupyter
@@ -82,3 +88,6 @@ Haskell:
   - haskell.haskell
   - justusadam.language-haskell
   - vigoo.stylish-haskell
+
+C:
+  - ms-vscode.cpptools-extension-pack
