@@ -1,7 +1,9 @@
 [window]
 decorations = "Buttonless"
 padding = { x = 4, y = 4}
-startup_mode = "Maximized"
+dynamic_title = true
+dynamic_padding = true
+resize_increments = true
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
